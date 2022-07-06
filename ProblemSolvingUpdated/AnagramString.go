@@ -3,7 +3,7 @@ package main
 //TODO:  Anagram of string and Bubble sort is covered.
 import "fmt"
 
-func main() {
+func main1() {
 	str1 := "silent"
 	str2 := "listen"
 	charArr1 := []rune(str1)

@@ -8,7 +8,7 @@ import (
 
 var batchSize int = 5
 
-func main() {
+func main5() {
 	var alertList map[string][]string
 	batchSize := 5
 	Data1 := `{

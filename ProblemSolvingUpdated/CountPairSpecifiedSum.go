@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main6() {
 	arr := []int{2, 4, 6, 8, 10, 3, 5, 7, 1, 0}
 	sum := 4
 	count := 0

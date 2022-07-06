@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 	var arrsize int = 5
 
 	arr := make([]int, arrsize)

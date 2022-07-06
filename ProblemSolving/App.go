@@ -4,7 +4,7 @@ import "fmt"
 
 var batchSize1 = 5
 
-func main() {
+func main1() {
 	count := 16
 	tempCount := 0
 	if count > 0 && count >= batchSize1 {

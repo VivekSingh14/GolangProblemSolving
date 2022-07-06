@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main15() {
 	nums := []int{-4, -1, 0, 3, 10}
 	sortedSquares(nums)
 }

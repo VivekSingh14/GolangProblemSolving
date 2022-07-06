@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main1() {
 	var arr []int = []int{2, 4, 6, 8, 10, 12}
 	fmt.Println("Sum of an array elements is: ", sum(arr))
 }

@@ -6,7 +6,7 @@ import "fmt"
 //TODO:  Find subarray with given sum from array of integers
 //TODO: with N complexity.
 
-func main() {
+func main18() {
 	arr := []int{1, 4, 20, 3, 10, 5}
 	sum := 33
 	curr_sum := arr[0]

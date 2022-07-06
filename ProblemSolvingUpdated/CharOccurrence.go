@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main5() {
 	str := "vivek"
 	map1 := make(map[rune]int)
 	arr := []rune(str)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 	map1 := make(map[int]int)
 
 	fmt.Println(map1)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main3() {
 	str := "adcbaefedhhibh"
 	var arr [26]int
 	charStr := []rune(str)

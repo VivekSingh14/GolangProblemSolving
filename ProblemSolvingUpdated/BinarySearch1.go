@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main4() {
 	arr := []int{-1, 0, 3, 5, 9, 12}
 	target := 12
 	start := 0

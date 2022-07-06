@@ -10,7 +10,7 @@ const MAX = 256
 /* TODO: Why it is called updated because rabin karp algo usually used to find the pattern from the
 TODO: text and here we are trying to find the anagrams. */
 
-func main() {
+func main14() {
 	text := "BACDGABCDA"
 	pattern := "ABCD"
 	searchAna(text, pattern)

@@ -5,7 +5,7 @@ import "fmt"
 
 const MAX_CHARS int = 26
 
-func main() {
+func main16() {
 	str := "aabacbebebe"
 	//str := "abacb"
 	k := 3

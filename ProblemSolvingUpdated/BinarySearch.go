@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main3() {
 	arr := []int{2, 4, 6, 8, 10}
 	num := 4
 	place := binarySearch(arr, 0, len(arr)-1, num)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main7() {
 	num1 := 0
 	num2 := 1
 	fmt.Print(num1, "\t")

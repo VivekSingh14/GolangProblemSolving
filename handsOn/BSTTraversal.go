@@ -52,7 +52,7 @@ func (b *bst) inorderRec(node *bstnode) {
 	}
 }
 
-func main() {
+func main3() {
 	treeImp := &bst{}
 	treeImp.insert(5)
 	treeImp.insert(3)

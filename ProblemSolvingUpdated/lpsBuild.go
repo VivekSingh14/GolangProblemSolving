@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main9() {
 	str := "AAAAA"
 	M := len(str)
 	var lps [5]int

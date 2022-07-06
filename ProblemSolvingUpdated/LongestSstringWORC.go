@@ -4,7 +4,7 @@ package main
 //TODO: Longest substring without repeating characters
 import "fmt"
 
-func main() {
+func main8() {
 	str := "geeksforgeeks"
 	longestUniqueSubsttr(str)
 }

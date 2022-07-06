@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main4() {
 	str := "adcbaefedhhibh"
 	var map1 = map[rune]int{}
 
