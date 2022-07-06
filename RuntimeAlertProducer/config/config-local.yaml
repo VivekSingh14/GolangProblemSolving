@@ -1,0 +1,20 @@
+KafkaConsumer:
+  AutoOffsetReset : earliest
+  SessionTimeout : 30000
+  PollTimeout : 3000
+  Broker: localhost:9092
+  ConsumerGroup : cwp-alert-generation-runtime-engine-group
+  FetchMinBytes: 1
+  Topics : [assets_policyfindings]
+  EnableAutoCommit : true
+  Mechanisms : PLAIN
+  Protocol : PLAINTEXT
+
+KafkaProducer:
+  Brokers: localhost:9092
+  Protocol: PLAINTEXT
+  Mechanisms: PLAIN
+  UserName: ""
+  Password: ""
+  BatchSize: 100
+  LingerMs: 1
