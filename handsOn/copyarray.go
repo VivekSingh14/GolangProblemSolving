@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main4() {
 	//when you declare the array with size such as below it is called an array
 	//And if you declare the array without size such as var arr []string(whether it is initialized or not ) it is called slice.
 	var arr [5]string = [5]string{"Scala", "Perl", "Java", "Python", "Go"}

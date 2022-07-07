@@ -30,7 +30,7 @@ func (r *Square) circleArea3() int {
 	r.a = 7
 	return r.a * r.a
 }
-func main() {
+func main14() {
 	var c = Circle{10, 20, 30}
 
 	//Passing the var c as a value which will be copied into the method.

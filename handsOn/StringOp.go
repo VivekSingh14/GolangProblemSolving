@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main24() {
 	str := "My  name is  Vivek"
 
 	fmt.Println(str)

@@ -12,7 +12,7 @@ func execute1(some string) {
 	}
 }
 
-func main() {
+func main6() {
 
 	go execute1("Vivek")
 

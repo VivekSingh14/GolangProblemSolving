@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main10() {
 	var mat [3][3]int
 	var count int = 0
 	for i := 0; i < len(mat); i++ {

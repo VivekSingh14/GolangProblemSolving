@@ -17,7 +17,7 @@ func (e employee) display() {
 	fmt.Println("Age: ", e.age)
 }
 
-func main() {
+func main18() {
 	employee1 := employee{
 		id:       1,
 		name:     "Vivek",

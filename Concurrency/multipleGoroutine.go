@@ -23,7 +23,7 @@ func Aid() {
 	}
 }
 
-func main() {
+func main4() {
 	fmt.Println(".....Main goroutine starts......")
 
 	go Aname()

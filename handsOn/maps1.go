@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main9() {
 	//Nil Map with key as integer and value type as string
 	//var mymap map[int]string
 

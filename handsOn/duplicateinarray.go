@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main6() {
 	arr := []int{2, 3, 6, 3, 9, 4}
 
 	for i := 0; i < 5; i++ {

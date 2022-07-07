@@ -12,7 +12,7 @@ type Vehicle struct {
 	age         int
 }
 
-func main() {
+func main8() {
 	map1 := make(map[string]interface{})
 
 	person := Person1{name: "Vivek", age: 27}

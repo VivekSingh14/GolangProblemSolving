@@ -14,7 +14,7 @@ func NewEmployee() *Employee {
 		salary:   8000,
 	}
 }
-func main() {
+func main16() {
 	var emp Employee = Employee{"Vivek", "Singh", 27, 9000}
 	fmt.Println("Employee's first name is : ", emp.firstname, "and his/her salary is: ", emp.salary)
 

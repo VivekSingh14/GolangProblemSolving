@@ -17,7 +17,7 @@ func (u *User) GetDetails() {
 	fmt.Println(u.Name, " ", u.Age)
 }
 
-func main() {
+func main26() {
 	//var u1 *User
 	u1 := NewBlogPost()
 	fmt.Println(u1.Name, " ", u1.Age)

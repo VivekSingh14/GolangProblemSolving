@@ -33,7 +33,7 @@ func (e1 Employee2impl) FixedSalary(Id int) {
 	fmt.Println(Id, " : ", e1.minwage*2)
 }
 
-func main() {
+func main13() {
 	employee1impl := Employee1Impl{basic: 3000}
 	employee1impl.CreateSalary("Vivek")
 

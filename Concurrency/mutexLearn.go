@@ -14,7 +14,7 @@ func worker(wg *sync.WaitGroup, wq *sync.Mutex) {
 	wg.Done()
 }
 
-func main() {
+func main5() {
 
 	var wg sync.WaitGroup
 	var wq sync.Mutex

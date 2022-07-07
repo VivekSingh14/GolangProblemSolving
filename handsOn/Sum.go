@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main27() {
 
 	a := 9
 	b := 10

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main12() {
 	arr := [3][3]string{{"C#", "java", "golang"},
 		{"C", "CPP", "JavaScript"},
 		{"Hi", "Hello"}}

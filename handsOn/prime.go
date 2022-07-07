@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main17() {
 	var count int
 	for i := 2; i <= 30; i++ {
 		count = 0

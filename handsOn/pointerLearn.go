@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main15() {
 
 	var a1 int = 3
 	var a2 *int = &a1

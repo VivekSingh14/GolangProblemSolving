@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main11() {
 	var arr []int = []int{6, 1, 8, 3, 10, 5, 33, 19}
 
 	var max int = 0

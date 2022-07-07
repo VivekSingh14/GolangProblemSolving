@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main19() {
 	var str string = "Hello Golang"
 
 	var arr []rune = []rune(str)

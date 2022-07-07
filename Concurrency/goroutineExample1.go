@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main() {
+func main3() {
 	go sum(3, 2)
 	sum(4, 5)
 

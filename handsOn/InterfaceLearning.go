@@ -15,7 +15,7 @@ func (t person1) display() int {
 	fmt.Println(t.name, " : ", t.age)
 	return 1
 }
-func main() {
+func main7() {
 	var t standard
 	t = person1{"Vivek", 27}
 	fmt.Println(t.display())

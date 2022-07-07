@@ -10,7 +10,7 @@ type person struct {
 	gender  string
 }
 
-func main() {
+func main25() {
 	var person1 []person = []person{
 		{100, "Vivek", 27, 9782606429, "Male"},
 		{101, "Alisha", 25, 9680437722, "Female"},

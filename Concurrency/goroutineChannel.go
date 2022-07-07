@@ -8,7 +8,7 @@ func sumRoutine(num chan int) {
 	close(num)
 }
 
-func main() {
+func main2() {
 
 	up := make(chan int)
 

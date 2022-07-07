@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main1() {
 	arr := make([]int, 5)
 	arr[0] = 2
 	arr[1] = 3

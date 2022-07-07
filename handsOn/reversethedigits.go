@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main20() {
 	var num int = 327
 	var rev int = 0
 	for num > 0 {

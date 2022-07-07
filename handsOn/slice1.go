@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main22() {
 
 	var slice []int
 

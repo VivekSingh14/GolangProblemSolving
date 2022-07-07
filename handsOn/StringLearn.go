@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main23() {
 	var name string = "Hello Vivek!! this is golang terminal."
 
 	for _, ch := range name {
