@@ -13,7 +13,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "ProblemSolving/App.go",
+            "program": "ProblemSolvingUpdated/rabinKarpAlgo.go",
             "buildFlags": "-tags dynamic"
         }
     ]
