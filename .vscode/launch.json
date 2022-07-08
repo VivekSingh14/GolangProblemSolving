@@ -13,7 +13,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "ProblemSolvingUpdated/rabinKarpAlgo.go",
+            "program": "ProblemSolvingUpdated/LongestSstringWORC.go",
             "buildFlags": "-tags dynamic"
         }
     ]

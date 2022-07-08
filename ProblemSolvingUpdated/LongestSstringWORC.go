@@ -1,10 +1,11 @@
 package main
 
-//TODO: SEQ NO: 3
-//TODO: Longest substring without repeating characters
 import "fmt"
 
-func main8() {
+//TODO: SEQ NO: 3
+//TODO: Longest substring without repeating characters
+
+func main() {
 	str := "geeksforgeeks"
 	longestUniqueSubsttr(str)
 }
@@ -16,7 +17,6 @@ func longestUniqueSubsttr(str string) {
 	currlen := 0
 	maxlen := 0
 	start := 0
-
 	map1 := make(map[rune]int)
 
 	map1[rune(str[0])] = 0
@@ -39,6 +39,6 @@ func longestUniqueSubsttr(str string) {
 		maxlen = i - st
 		start = st
 	}
-
+	fmt.Println(start, " ", maxlen)
 	fmt.Println(str[start:maxlen])
 }

@@ -4,7 +4,7 @@ import "fmt"
 
 const MAX1 = 256
 
-func main() {
+func main8() {
 	txt := "BACDGABCDA"
 	pat := "ABCD"
 
