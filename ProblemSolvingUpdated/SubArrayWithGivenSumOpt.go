@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-//TODO: SEQ NO: 6
+//TODO: SEQ NO: 7
 //TODO:  Find subarray with given sum from array of integers
 //TODO: with N complexity.
 
-func main18() {
+func main23() {
 	arr := []int{1, 4, 20, 3, 10, 5}
 	sum := 33
 	curr_sum := arr[0]
