@@ -13,7 +13,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "ProblemSolvingUpdated/FourthSlidingProblem.go",
+            "program": "ProblemSolvingUpdated/MinKSum.go",
             "buildFlags": "-tags dynamic"
         }
     ]

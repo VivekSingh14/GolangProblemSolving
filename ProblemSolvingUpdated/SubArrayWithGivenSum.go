@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//TODO: SEQ NO: 6
+//TODO: SEQ NO: 7
 //TODO:  Find subarray with given sum from array of integers
 //TODO: with N^2 complexity.
 

@@ -5,7 +5,7 @@ import "fmt"
 //TODO SEQ NO 4
 //TODO Find Index of 0 to be replaced with 1 to get longest continuous sequence of 1s in a binary array
 
-func main() {
+func main18() {
 	arr := []int{1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1}
 	length := len(arr)
 
