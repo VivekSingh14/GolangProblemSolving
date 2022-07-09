@@ -5,7 +5,11 @@ import "fmt"
 const MAX1 = 256
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 func main8() {
+=======
+func main11() {
+>>>>>>> Stashed changes
 =======
 func main11() {
 >>>>>>> Stashed changes
