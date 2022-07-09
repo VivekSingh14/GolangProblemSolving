@@ -13,15 +13,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            "program": "ProblemSolvingUpdated/LongestSstringWORC.go",
-=======
             "program": "ProblemSolvingUpdated/FourthSlidingProblem.go",
->>>>>>> Stashed changes
-=======
-            "program": "ProblemSolvingUpdated/FourthSlidingProblem.go",
->>>>>>> Stashed changes
             "buildFlags": "-tags dynamic"
         }
     ]
