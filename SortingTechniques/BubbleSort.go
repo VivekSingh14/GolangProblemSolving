@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main1() {
 	arr := []int{3, 7, 9, 10, 6, 5, 12, 4, 11, 2}
 	sorted := bubbleSort(arr)
 	fmt.Println(sorted)
