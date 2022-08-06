@@ -1,2 +1,3 @@
 # GolangProblemSolving
-Problem Solving examples 
+
+![Alt text](gologo.png "Optional title")
