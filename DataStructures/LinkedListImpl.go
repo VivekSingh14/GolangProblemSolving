@@ -9,22 +9,20 @@ type Node struct {
 
 type LinkedList struct {
 	head *Node
-	len  int
 }
 
 func (l *LinkedList) Insert(data int) {
 	n := Node{}
 	n.data = data
-	if l.len == 0 {
+	if l.head == nil {
 		l.head = &n
-		l.len++
+		//l.len++
 		return
 	}
 	ptr := l.head
-	for i := 0; i < l.len; i++ {
+	for ptr != nil {
 		if ptr.next == nil {
 			ptr.next = &n
-			l.len++
 			return
 		}
 		ptr = ptr.next
@@ -32,11 +30,11 @@ func (l *LinkedList) Insert(data int) {
 }
 
 func (l *LinkedList) Display() {
-	if l.len == 0 {
+	if l.head == nil {
 		fmt.Println("0 Elements in the linkedList")
 	}
 	ptr := l.head
-	for i := 0; i < l.len; i++ {
+	for ptr != nil {
 		fmt.Print(ptr.data, "\t")
 		ptr = ptr.next
 	}
@@ -44,7 +42,7 @@ func (l *LinkedList) Display() {
 }
 
 func (l *LinkedList) DeleteAtStart() {
-	if l.len == 0 {
+	if l.head == nil {
 		fmt.Println("No elements to be deleted.")
 	}
 
@@ -53,20 +51,19 @@ func (l *LinkedList) DeleteAtStart() {
 	fmt.Println(ptr.data, " will be deleted.")
 	ptr = ptr.next
 	l.head = ptr
-	l.len--
 }
 
-func (l *LinkedList) DeleteAtPosition(pos int) {
-	if l.len < pos {
-		fmt.Println("Invalid linked list")
-	}
-	ptr := l.head
-	for i := 1; i < pos-1; i++ {
-		ptr = ptr.next
-	}
-	ptr.next = ptr.next.next
-	l.len--
-}
+// func (l *LinkedList) DeleteAtPosition(pos int) {
+// 	if l.len < pos {
+// 		fmt.Println("Invalid linked list")
+// 	}
+// 	ptr := l.head
+// 	for i := 1; i < pos-1; i++ {
+// 		ptr = ptr.next
+// 	}
+// 	ptr.next = ptr.next.next
+// 	l.len--
+// }
 
 func (l *LinkedList) Reverse() *Node {
 	var prev *Node
@@ -94,16 +91,16 @@ func main() {
 	fmt.Println("============Before deletion.============")
 	ll1.Display()
 
-	//ll1.DeleteAtStart()
-	//fmt.Println("============After deletion.============")
-	//ll1.Display()
+	ll1.DeleteAtStart()
+	fmt.Println("============After deletion.============")
+	ll1.Display()
 	//
 	//ll1.DeleteAtPosition(2)
 	//fmt.Println("============After deletion.============")
 	//ll1.Display()
 
-	ll := ll1.Reverse()
-	ll1.head = ll
-	fmt.Println("============After reverse.============")
-	ll1.Display()
+	// ll := ll1.Reverse()
+	// ll1.head = ll
+	// fmt.Println("============After reverse.============")
+	// ll1.Display()
 }
