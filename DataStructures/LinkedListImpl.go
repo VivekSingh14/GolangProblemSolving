@@ -80,7 +80,7 @@ func (l *LinkedList) Reverse() *Node {
 	return prev
 }
 
-func main() {
+func main1() {
 	ll1 := LinkedList{}
 	ll1.Insert(2)
 	ll1.Insert(3)
