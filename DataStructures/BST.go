@@ -50,21 +50,31 @@ func printInOrder(n *Node1) {
 	if n == nil {
 		return
 	} else {
-		printPreOrder(n.left)
+		printInOrder(n.left)
 		fmt.Printf("%d \t", n.data)
-		printPreOrder(n.right)
+		printInOrder(n.right)
+	}
+}
+
+func printPostOrder(n *Node1) {
+	if n == nil {
+		return
+	} else {
+		printPostOrder(n.left)
+		printPostOrder(n.right)
+		fmt.Printf("%d \t", n.data)
 	}
 }
 
 func main() {
 	var t BsTree
-	t.InsertIntoTree(6)
-	t.InsertIntoTree(2)
-	t.InsertIntoTree(1)
 	t.InsertIntoTree(4)
-	t.InsertIntoTree(3)
+	t.InsertIntoTree(2)
 	t.InsertIntoTree(5)
-	t.InsertIntoTree(7)
+	t.InsertIntoTree(1)
+	t.InsertIntoTree(3)
+	//t.InsertIntoTree(5)
+	//t.InsertIntoTree(7)
 	//t.InsertIntoTree(2)
 
 	fmt.Println("PreOrder.....")
@@ -72,4 +82,7 @@ func main() {
 
 	fmt.Println("\nInOrder.....")
 	printInOrder(t.root)
+
+	fmt.Println("\nPostOrder.....")
+	printPostOrder(t.root)
 }
