@@ -66,7 +66,7 @@ func printPostOrder(n *Node1) {
 	}
 }
 
-func main() {
+func main2() {
 	var t BsTree
 	t.InsertIntoTree(4)
 	t.InsertIntoTree(2)
