@@ -96,6 +96,36 @@ func preorderTraversal(root *Node2) []int {
 	return result
 }
 
+func postorderTraversal(root *Node2) []int {
+
+	var stack1 []*Node2
+	var stack2 []*Node2
+	var result []int
+
+	//curr := root
+	stack1 = append(stack1, root)
+	for len(stack1) != 0 {
+
+		temp := stack1[len(stack1)-1]
+		stack1 = stack1[:len(stack1)-1]
+		stack2 = append(stack2, temp)
+		if temp.left != nil {
+			stack1 = append(stack1, temp.left)
+		}
+		if temp.right != nil {
+			stack1 = append(stack1, temp.right)
+		}
+
+	}
+	j := len(stack2) - 1
+	for j >= 0 {
+		curr := stack2[j]
+		result = append(result, curr.data)
+		j--
+	}
+	return result
+}
+
 func main() {
 
 	var t BstItr
@@ -110,5 +140,8 @@ func main() {
 
 	arr1 := preorderTraversal(t.root)
 	fmt.Println(arr1)
+
+	arr2 := postorderTraversal(t.root)
+	fmt.Println(arr2)
 
 }
