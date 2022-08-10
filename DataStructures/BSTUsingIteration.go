@@ -72,9 +72,29 @@ func inorderTraversal(root *Node2) []int {
 	return result
 }
 
-// func preorderTraversal(root *Node2) []int {
+func preorderTraversal(root *Node2) []int {
 
-// }
+	var stack []*Node2
+	var result []int
+
+	curr := root
+	stack = append(stack, curr)
+
+	for len(stack) != 0 {
+
+		curr = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		result = append(result, curr.data)
+
+		if curr.right != nil {
+			stack = append(stack, curr.right)
+		}
+		if curr.left != nil {
+			stack = append(stack, curr.left)
+		}
+	}
+	return result
+}
 
 func main() {
 
@@ -87,5 +107,8 @@ func main() {
 
 	arr := inorderTraversal(t.root)
 	fmt.Println(arr)
+
+	arr1 := preorderTraversal(t.root)
+	fmt.Println(arr1)
 
 }
