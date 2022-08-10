@@ -8,6 +8,7 @@ type Node2 struct {
 	right *Node2
 }
 
+//added comment
 type BstItr struct {
 	root *Node2
 }
