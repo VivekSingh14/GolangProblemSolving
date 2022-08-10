@@ -36,22 +36,6 @@ func (node *Node2) InsertIntoTree1(data int) {
 	}
 }
 
-// func inOrderTraversal(temp *BstItr) {
-// 	var stack []*Node2
-// 	//var res []int
-// 	cur := temp.root
-
-// 	for cur != nil {
-// 		for cur != nil {
-// 			stack = append(stack, cur)
-// 			cur = cur.left
-// 		}
-// 		te := stack[len(stack)-1]
-// 		fmt.Print(te.data, "\t")
-// 		cur = cur.right
-// 	}
-// }
-
 func inorderTraversal(root *Node2) []int {
 	var stack []*Node2
 	var result []int
