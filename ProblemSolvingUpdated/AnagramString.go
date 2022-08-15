@@ -30,9 +30,9 @@ func main1() {
 	}
 	fmt.Println()
 	if string(charArr1) == string(charArr2) {
-		fmt.Println("Strings are armstrong")
+		fmt.Println("Strings are anagram")
 	} else {
-		fmt.Println("String are not armstrong")
+		fmt.Println("String are not anagram")
 	}
 
 }
