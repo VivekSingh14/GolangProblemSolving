@@ -5,7 +5,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main16() {
 	arr := []int{10, 4, 2, 5, 6, 3, 8, 1}
 	k := 3
 	min_sum := 0

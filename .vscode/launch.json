@@ -13,7 +13,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "DataStructures/BSTUsingIteration.go",
+            "program": "first/main.go",
             "buildFlags": "-tags dynamic"
         }
     ]
