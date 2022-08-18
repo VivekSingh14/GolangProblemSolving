@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "ProblemSolvingUpdated/sStringWORKChars.go",
+            "program": "ProblemSolvingUpdated/SearchAnagrams.go",
             "buildFlags": "-tags dynamic"
         }
     ]
