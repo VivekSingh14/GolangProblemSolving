@@ -5,7 +5,7 @@ import "fmt"
 //TODO: SEQ NO: 3
 //TODO: Longest substring without repeating characters
 
-func main20() {
+func main21() {
 	str := "geeksforgeeks"
 	longestUniqueSubsttr(str)
 }
