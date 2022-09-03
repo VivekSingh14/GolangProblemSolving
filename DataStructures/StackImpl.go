@@ -29,13 +29,21 @@ func (n *NodeSk) Push(data int) {
 
 }
 
+func (s *StackImpl) Pop() {
+	for s.head.next != nil {
+		s.head = s.head.next
+	}
+	fmt.Print(s.head.data, "\t")
+}
+
 func (s *StackImpl) Traverse() {
 	temp := s.head
 
-	for temp.next != nil {
+	for temp != nil {
 		fmt.Print(temp.data, "\t")
 		temp = temp.next
 	}
+	fmt.Println()
 }
 
 func main() {
@@ -46,4 +54,6 @@ func main() {
 	stack1.Push(6)
 
 	stack1.Traverse()
+	fmt.Println("-------------------------------")
+	stack1.Pop()
 }
