@@ -30,6 +30,7 @@ func (n *NodeSk) Push(data int) {
 }
 
 func (s *StackImpl) Pop() {
+
 	for s.head.next != nil {
 		s.head = s.head.next
 	}
