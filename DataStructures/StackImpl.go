@@ -47,7 +47,7 @@ func (s *StackImpl) Traverse() {
 	fmt.Println()
 }
 
-func main() {
+func main2() {
 	var stack1 StackImpl
 	stack1.Push(3)
 	stack1.Push(4)

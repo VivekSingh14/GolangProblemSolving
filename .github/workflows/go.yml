@@ -19,7 +19,7 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: go build -v DataStructures/StackImpl.go
+      run: go build -v DataStructures/BST.go
 
     - name: Test
-      run: go test -v DataStructures/StackImpl.go
+      run: go test -v DataStructures/BST.go

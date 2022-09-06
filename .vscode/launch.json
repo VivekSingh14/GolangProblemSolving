@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "DataStructures/StackImpl.go",
+            "program": "DataStructures/BST.go",
             "buildFlags": "-tags dynamic"
         }
     ]

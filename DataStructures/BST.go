@@ -66,13 +66,32 @@ func printPostOrder(n *Node1) {
 	}
 }
 
-func main2() {
+func searchNode(n *Node1, data int) {
+	if n == nil {
+		fmt.Println("Node not found.")
+		return
+	}
+	if n.data == data {
+		fmt.Println("Found it.")
+	}
+	if data > n.data {
+		searchNode(n.right, data)
+	} else {
+		searchNode(n.left, data)
+	}
+
+}
+
+func main() {
 	var t BsTree
 	t.InsertIntoTree(4)
 	t.InsertIntoTree(2)
 	t.InsertIntoTree(5)
 	t.InsertIntoTree(1)
 	t.InsertIntoTree(3)
+	t.InsertIntoTree(10)
+	t.InsertIntoTree(8)
+	t.InsertIntoTree(6)
 	//t.InsertIntoTree(5)
 	//t.InsertIntoTree(7)
 	//t.InsertIntoTree(2)
@@ -85,4 +104,7 @@ func main2() {
 
 	fmt.Println("\nPostOrder.....")
 	printPostOrder(t.root)
+
+	fmt.Println("\nSearch in tree........")
+	searchNode(t.root, 14)
 }
