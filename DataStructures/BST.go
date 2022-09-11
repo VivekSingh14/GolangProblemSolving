@@ -73,8 +73,7 @@ func searchNode(n *Node1, data int) {
 	}
 	if n.data == data {
 		fmt.Println("Found it.")
-	}
-	if data > n.data {
+	} else if data > n.data {
 		searchNode(n.right, data)
 	} else {
 		searchNode(n.left, data)
@@ -106,5 +105,5 @@ func main() {
 	printPostOrder(t.root)
 
 	fmt.Println("\nSearch in tree........")
-	searchNode(t.root, 14)
+	searchNode(t.root, 10)
 }
