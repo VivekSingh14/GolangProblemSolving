@@ -81,6 +81,72 @@ func searchNode(n *Node1, data int) {
 
 }
 
+func deleteNode(root *Node1, data int) *Node1 {
+
+	var parent *Node1
+	curr := root
+
+	for curr != nil && curr.data != data {
+		parent = curr
+
+		if data < curr.data {
+			curr = curr.left
+		} else {
+			curr = curr.right
+		}
+	}
+	// if to be deleted node is root node
+	if curr == nil {
+		return root
+	}
+	//if to be deleted node is leaf node
+	if curr.left == nil && curr.right == nil {
+		if curr != root {
+			if parent.left == curr {
+				parent.left = nil
+			} else {
+				parent.right = nil
+			}
+		} else {
+			root = nil
+		}
+		// if the node to be deleted, having both child
+	} else if curr.left != nil && curr.right != nil {
+		minNode := getMinKey(curr.right)
+
+		val := minNode.data
+
+		deleteNode(root, val)
+
+		curr.data = val
+	} else {
+		var child *Node1
+		if curr.left != nil {
+			child = curr.left
+		} else {
+			child = curr.right
+		}
+
+		if curr != root {
+			if curr == parent.left {
+				parent.left = child
+			} else {
+				parent.right = child
+			}
+		} else {
+			root = child
+		}
+	}
+	return root
+}
+
+func getMinKey(tempNode *Node1) *Node1 {
+	for tempNode.left != nil {
+		tempNode = tempNode.left
+	}
+	return tempNode
+}
+
 func main() {
 	var t BsTree
 	t.InsertIntoTree(4)
@@ -106,4 +172,10 @@ func main() {
 
 	fmt.Println("\nSearch in tree........")
 	searchNode(t.root, 10)
+
+	fmt.Println("\ndelete in tree........")
+	temp := deleteNode(t.root, 10)
+
+	fmt.Println("\nInOrder.....")
+	printInOrder(temp)
 }
