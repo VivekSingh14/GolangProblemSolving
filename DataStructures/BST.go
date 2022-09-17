@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 type Node1 struct {
 	left  *Node1
@@ -178,4 +181,43 @@ func main() {
 
 	fmt.Println("\nInOrder.....")
 	printInOrder(temp)
+
+	// arr := make([]int, 8)
+	// arr = append(arr, 4)
+	// arr = append(arr, 2)
+	// arr = append(arr, 5)
+	// arr = append(arr, 1)
+	// arr = append(arr, 3)
+	// arr = append(arr, 10)
+	// arr = append(arr, 8)
+	// arr = append(arr, 6)
+
+	arr := []int{8, 4, 2, 5, 1, 3, 10}
+
+	newtree := convert(arr)
+	fmt.Println("\nInOrder..... after convert.........")
+	//fmt.Print(newtree)
+	printInOrder(newtree)
+
+}
+
+func convert(arr []int) *Node1 {
+	sort.Ints(arr)
+	temp := convert1(arr, 0, len(arr)-1)
+	return temp
+}
+
+func convert1(arr []int, low int, high int) *Node1 {
+	if low > high {
+		return nil
+	}
+
+	mid := (low + high) / 2
+
+	root := Node1{nil, arr[mid], nil}
+
+	root.left = convert1(arr, low, mid-1)
+	root.right = convert1(arr, mid+1, high)
+
+	return &root
 }
