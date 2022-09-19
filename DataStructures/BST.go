@@ -196,8 +196,10 @@ func main() {
 
 	newtree := convert(arr)
 	fmt.Println("\nInOrder..... after convert.........")
-	//fmt.Print(newtree)
 	printInOrder(newtree)
+
+	fmt.Println("\nIs BST.....")
+	fmt.Println(isBst(newtree))
 
 }
 
@@ -220,4 +222,23 @@ func convert1(arr []int, low int, high int) *Node1 {
 	root.right = convert1(arr, mid+1, high)
 
 	return &root
+}
+
+func isBst(node *Node1) bool {
+	if node == nil {
+		return true
+	}
+	if node.left != nil && node.left.data > node.data {
+		return false
+	}
+
+	if node.right != nil && node.right.data < node.data {
+		return false
+	}
+
+	if !isBst(node.left) || !isBst(node.right) {
+		return false
+	}
+
+	return true
 }
