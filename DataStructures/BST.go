@@ -224,6 +224,7 @@ func convert1(arr []int, low int, high int) *Node1 {
 	return &root
 }
 
+//not a perfect solution
 func isBst(node *Node1) bool {
 	if node == nil {
 		return true
