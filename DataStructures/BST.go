@@ -201,6 +201,9 @@ func main() {
 	fmt.Println("\nIs BST.....")
 	fmt.Println(isBst(newtree))
 
+	fmt.Println("\nIn Order Predecessor.....")
+	fmt.Println(inOrderPredecessor(newtree, 3))
+
 }
 
 func convert(arr []int) *Node1 {
@@ -242,4 +245,25 @@ func isBst(node *Node1) bool {
 	}
 
 	return true
+}
+
+func inOrderPredecessor(root *Node1, key int) int {
+	var predec int
+	if root != nil {
+		if root.data == key {
+			if root.left != nil {
+				t := root.left
+
+				for t.right != nil {
+					t = t.right
+				}
+				predec = t.data
+			}
+			return predec
+		} else if root.data < key {
+			node := root.right
+			inOrderPredecessor(node, key)
+		}
+	}
+	return 0
 }
