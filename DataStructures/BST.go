@@ -204,6 +204,9 @@ func main() {
 	fmt.Println("\nIn Order Predecessor.....")
 	fmt.Println(inOrderPredecessor(newtree, 3))
 
+	fmt.Println("\nMin and Max in .....")
+	fmt.Println(findMaxMin(newtree))
+
 }
 
 func convert(arr []int) *Node1 {
@@ -266,4 +269,21 @@ func inOrderPredecessor(root *Node1, key int) int {
 		}
 	}
 	return 0
+}
+
+func findMaxMin(root *Node1) (int, int) {
+
+	node := root
+
+	for node.left != nil {
+		node = node.left
+	}
+	min := node.data
+
+	node = root
+	for node.right != nil {
+		node = node.right
+	}
+	max := node.data
+	return min, max
 }
