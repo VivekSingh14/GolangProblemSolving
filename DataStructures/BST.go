@@ -207,6 +207,9 @@ func main() {
 	fmt.Println("\nMin and Max in .....")
 	fmt.Println(findMaxMin(newtree))
 
+	fmt.Println("\nK th Max .....")
+	fmt.Println(findKthMax(newtree, 2))
+
 }
 
 func convert(arr []int) *Node1 {
@@ -286,4 +289,30 @@ func findMaxMin(root *Node1) (int, int) {
 	}
 	max := node.data
 	return min, max
+}
+
+func findKthMax(root *Node1, k int) int {
+	store := storeInOrder(root)
+	storeCap := len(store)
+	return store[storeCap-k]
+}
+
+func storeInOrder(n *Node1) []int {
+	var stack []*Node1
+	var result []int
+	curr := n
+	for curr != nil || len(stack) != 0 {
+		// go left as far as possible
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.left
+		}
+		// add to result and go right
+		curr = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		result = append(result, curr.data)
+		curr = curr.right
+	}
+
+	return result
 }
