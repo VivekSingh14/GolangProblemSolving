@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"sort"
+
+	"golang.org/x/exp/slices"
 )
 
 type Node1 struct {
@@ -210,6 +212,9 @@ func main() {
 	fmt.Println("\nK th Max .....")
 	fmt.Println(findKthMax(newtree, 2))
 
+	fmt.Println("\nPair with given sum .....")
+	PairWithGivenSum(newtree, 15)
+
 }
 
 func convert(arr []int) *Node1 {
@@ -315,4 +320,28 @@ func storeInOrder(n *Node1) []int {
 	}
 
 	return result
+}
+
+func PairWithGivenSum(root *Node1, sum int) {
+
+	var stack []*Node1
+	slice1 := make([]int, 4)
+	curr := root
+	for curr != nil || len(stack) != 0 {
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.left
+		}
+		curr = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		tempSum := sum - curr.data
+		//if tempSum !=
+		if slices.Contains(slice1, tempSum) {
+			fmt.Println(curr.data, " : ", tempSum)
+			return
+		} else {
+			slice1 = append(slice1, curr.data)
+		}
+		curr = curr.right
+	}
 }
