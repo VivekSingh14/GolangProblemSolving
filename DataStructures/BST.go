@@ -215,6 +215,9 @@ func main() {
 	fmt.Println("\nPair with given sum .....")
 	PairWithGivenSum(newtree, 15)
 
+	fmt.Println("\nHeight or depth of tree .....")
+	fmt.Println(heightOrDepthOfTree(newtree))
+
 }
 
 func convert(arr []int) *Node1 {
@@ -344,4 +347,20 @@ func PairWithGivenSum(root *Node1, sum int) {
 		}
 		curr = curr.right
 	}
+}
+
+func heightOrDepthOfTree(root *Node1) int {
+	var x, y int
+	temp := root
+	if temp != nil {
+		x = heightOrDepthOfTree(temp.left)
+		y = heightOrDepthOfTree(temp.right)
+
+		if x > y {
+			return x + 1
+		} else {
+			return y + 1
+		}
+	}
+	return 0
 }
