@@ -218,6 +218,10 @@ func main() {
 	fmt.Println("\nHeight or depth of tree .....")
 	fmt.Println(heightOrDepthOfTree(newtree))
 
+	fmt.Println("\nPrint leaf Nodes .....")
+	printLeafNodes(newtree)
+	fmt.Println()
+
 }
 
 func convert(arr []int) *Node1 {
@@ -363,4 +367,20 @@ func heightOrDepthOfTree(root *Node1) int {
 		}
 	}
 	return 0
+}
+
+func printLeafNodes(root *Node1) {
+
+	if root == nil {
+		return
+	}
+
+	temp := root
+
+	printLeafNodes(temp.left)
+	if temp.left == nil && temp.right == nil {
+		fmt.Print(temp.data, "\t")
+	}
+	printLeafNodes(temp.right)
+
 }
