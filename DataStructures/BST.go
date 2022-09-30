@@ -152,7 +152,7 @@ func getMinKey(tempNode *Node1) *Node1 {
 	return tempNode
 }
 
-func main() {
+func main4() {
 	var t BsTree
 	t.InsertIntoTree(4)
 	t.InsertIntoTree(2)
