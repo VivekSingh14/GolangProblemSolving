@@ -35,6 +35,44 @@ func InorderTree(root *TreeNode) {
 	InorderTree(temp.right)
 }
 
+func PreOrder(root *TreeNode) {
+	temp := root
+
+	if temp == nil {
+		return
+	}
+
+	fmt.Print(temp.data, " \t")
+	PreOrder(temp.left)
+	PreOrder(temp.right)
+}
+
+func PostOrder(root *TreeNode) {
+	temp := root
+
+	if temp == nil {
+		return
+	}
+
+	PostOrder(temp.left)
+	PostOrder(temp.right)
+	fmt.Print(temp.data, " \t")
+}
+
+func LeafNode(root *TreeNode) {
+	temp := root
+
+	if temp == nil {
+		return
+	}
+	LeafNode(temp.left)
+	if temp.left == nil && temp.right == nil {
+		fmt.Println(temp.data)
+	}
+	LeafNode(temp.right)
+
+}
+
 func main() {
 	var root *TreeNode
 
@@ -47,5 +85,13 @@ func main() {
 	root = Insert(root, 8)
 	root = Insert(root, 6)
 
+	PreOrder(root)
+	fmt.Println()
 	InorderTree(root)
+	fmt.Println()
+	PostOrder(root)
+	fmt.Println()
+	fmt.Println("---------------")
+	LeafNode(root)
+
 }
