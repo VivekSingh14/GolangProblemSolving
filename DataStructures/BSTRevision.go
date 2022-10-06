@@ -35,7 +35,7 @@ func InorderTree(root *TreeNode) {
 	InorderTree(temp.right)
 }
 
-func PreOrder(root *TreeNode) {
+func PreOrderTree(root *TreeNode) {
 	temp := root
 
 	if temp == nil {
@@ -43,19 +43,19 @@ func PreOrder(root *TreeNode) {
 	}
 
 	fmt.Print(temp.data, " \t")
-	PreOrder(temp.left)
-	PreOrder(temp.right)
+	PreOrderTree(temp.left)
+	PreOrderTree(temp.right)
 }
 
-func PostOrder(root *TreeNode) {
+func PostOrderTree(root *TreeNode) {
 	temp := root
 
 	if temp == nil {
 		return
 	}
 
-	PostOrder(temp.left)
-	PostOrder(temp.right)
+	PostOrderTree(temp.left)
+	PostOrderTree(temp.right)
 	fmt.Print(temp.data, " \t")
 }
 
@@ -78,19 +78,19 @@ func main() {
 
 	root = Insert(root, 4)
 	root = Insert(root, 2)
-	root = Insert(root, 5)
-	root = Insert(root, 1)
-	root = Insert(root, 3)
-	root = Insert(root, 10)
-	root = Insert(root, 8)
 	root = Insert(root, 6)
+	root = Insert(root, 3)
+	root = Insert(root, 1)
+	root = Insert(root, 5)
+	root = Insert(root, 7)
+	//root = Insert(root, 6)
 
-	PreOrder(root)
-	fmt.Println()
+	PreOrderTree(root)
+	fmt.Println("PreOrder")
 	InorderTree(root)
-	fmt.Println()
-	PostOrder(root)
-	fmt.Println()
+	fmt.Println("InOrder")
+	PostOrderTree(root)
+	fmt.Println("PostOrder")
 	fmt.Println("---------------")
 	LeafNode(root)
 
