@@ -73,7 +73,7 @@ func LeafNode(root *TreeNode) {
 
 }
 
-func main() {
+func main3() {
 	var root *TreeNode
 
 	root = Insert(root, 4)
