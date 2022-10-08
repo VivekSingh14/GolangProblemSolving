@@ -48,8 +48,8 @@ func inorderTraversal(root *Node2) []int {
 			curr = curr.left
 		}
 		// add to result and go right
-		curr = stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
+		curr = stack[len(stack)-1]   //fetching value
+		stack = stack[:len(stack)-1] //stack pop
 		result = append(result, curr.data)
 		curr = curr.right
 	}
@@ -111,14 +111,16 @@ func postorderTraversal(root *Node2) []int {
 	return result
 }
 
-func main3() {
+func main() {
 
 	var t BstItr
 	t.InsertIntoTree1(4)
 	t.InsertIntoTree1(2)
-	t.InsertIntoTree1(5)
-	t.InsertIntoTree1(1)
+	t.InsertIntoTree1(6)
 	t.InsertIntoTree1(3)
+	t.InsertIntoTree1(1)
+	t.InsertIntoTree1(5)
+	t.InsertIntoTree1(7)
 
 	arr := inorderTraversal(t.root)
 	fmt.Println(arr)
