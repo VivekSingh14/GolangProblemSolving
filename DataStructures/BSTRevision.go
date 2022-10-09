@@ -73,7 +73,7 @@ func LeafNode(root *TreeNode) {
 
 }
 
-func main3() {
+func main() {
 	var root *TreeNode
 
 	root = Insert(root, 4)
@@ -93,5 +93,24 @@ func main3() {
 	fmt.Println("PostOrder")
 	fmt.Println("---------------")
 	LeafNode(root)
+	fmt.Println("---------------")
+	InOrderUsingIteration(root)
+
+}
+
+func InOrderUsingIteration(root *TreeNode) {
+	var stack []*TreeNode
+	curr := root
+
+	for curr != nil || len(stack) != 0 {
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.left
+		}
+		curr = stack[len(stack)-1]   //fetching value
+		stack = stack[:len(stack)-1] //stack pop
+		fmt.Print(curr.data, "  ")
+		curr = curr.right
+	}
 
 }
