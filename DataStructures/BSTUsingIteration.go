@@ -111,7 +111,7 @@ func postorderTraversal(root *Node2) []int {
 	return result
 }
 
-func main() {
+func mai3() {
 
 	var t BstItr
 	t.InsertIntoTree1(4)
