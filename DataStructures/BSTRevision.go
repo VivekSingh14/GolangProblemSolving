@@ -95,6 +95,8 @@ func main() {
 	LeafNode(root)
 	fmt.Println("---------------")
 	InOrderUsingIteration(root)
+	fmt.Println("\n---------------")
+	PreOrderUsingIteration(root)
 
 }
 
@@ -111,6 +113,27 @@ func InOrderUsingIteration(root *TreeNode) {
 		stack = stack[:len(stack)-1] //stack pop
 		fmt.Print(curr.data, "  ")
 		curr = curr.right
+	}
+
+}
+
+func PreOrderUsingIteration(root *TreeNode) {
+	var stack []*TreeNode
+	curr := root
+
+	stack = append(stack, curr)
+
+	for len(stack) != 0 {
+		curr = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		fmt.Print(curr.data, " ")
+		if curr.right != nil {
+			stack = append(stack, curr.right)
+		}
+
+		if curr.left != nil {
+			stack = append(stack, curr.left)
+		}
 	}
 
 }
