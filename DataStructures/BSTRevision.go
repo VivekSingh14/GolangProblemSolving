@@ -93,10 +93,12 @@ func main() {
 	fmt.Println("PostOrder")
 	fmt.Println("---------------")
 	LeafNode(root)
-	fmt.Println("---------------")
+	fmt.Println("-------Inorder--------")
 	InOrderUsingIteration(root)
-	fmt.Println("\n---------------")
+	fmt.Println("\n-------PreOrder--------")
 	PreOrderUsingIteration(root)
+	fmt.Println("\n-------PostOrder--------")
+	PostOrderUsingIteration(root)
 
 }
 
@@ -134,6 +136,34 @@ func PreOrderUsingIteration(root *TreeNode) {
 		if curr.left != nil {
 			stack = append(stack, curr.left)
 		}
+	}
+
+}
+
+func PostOrderUsingIteration(root *TreeNode) {
+	var stack1 []*TreeNode
+	var stack2 []*TreeNode
+
+	curr := root
+	stack1 = append(stack1, curr)
+	for len(stack1) != 0 {
+
+		temp := stack1[len(stack1)-1]
+		stack1 = stack1[:len(stack1)-1]
+		stack2 = append(stack2, temp)
+		if temp.left != nil {
+			stack1 = append(stack1, temp.left)
+		}
+		if temp.right != nil {
+			stack1 = append(stack1, temp.right)
+		}
+
+	}
+	j := len(stack2) - 1
+	for j >= 0 {
+		curr := stack2[j]
+		fmt.Print(curr.data, " ")
+		j--
 	}
 
 }
