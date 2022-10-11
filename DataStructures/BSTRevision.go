@@ -99,6 +99,8 @@ func main() {
 	PreOrderUsingIteration(root)
 	fmt.Println("\n-------PostOrder--------")
 	PostOrderUsingIteration(root)
+	fmt.Println("\n-------Height of tree: --------")
+	fmt.Println(HeightOfTree(root))
 
 }
 
