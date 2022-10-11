@@ -167,3 +167,19 @@ func PostOrderUsingIteration(root *TreeNode) {
 	}
 
 }
+
+func HeightOfTree(root *TreeNode) int {
+	var x, y int
+	temp := root
+	if temp != nil {
+		x = HeightOfTree(temp.left)
+		y = HeightOfTree(temp.right)
+
+		if x > y {
+			return x + 1
+		} else {
+			return y + 1
+		}
+	}
+	return 0
+}
