@@ -101,6 +101,8 @@ func main() {
 	PostOrderUsingIteration(root)
 	fmt.Println("\n-------Height of tree: --------")
 	fmt.Println(HeightOfTree(root))
+	fmt.Println("\n-------Level Order--------")
+	LevelOrderTraversal(root)
 
 }
 
@@ -184,4 +186,23 @@ func HeightOfTree(root *TreeNode) int {
 		}
 	}
 	return 0
+}
+
+func LevelOrderTraversal(root *TreeNode) {
+	var queue1 []*TreeNode
+	temp := root
+	queue1 = append(queue1, temp)
+
+	for len(queue1) != 0 {
+
+		temp = queue1[0]
+		queue1 = queue1[1:]
+		fmt.Print(temp.data, " ")
+		if temp.left != nil || temp.right != nil {
+			queue1 = append(queue1, temp.left)
+			queue1 = append(queue1, temp.right)
+		}
+
+	}
+
 }
