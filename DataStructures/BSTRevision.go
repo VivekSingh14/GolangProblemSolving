@@ -206,3 +206,22 @@ func LevelOrderTraversal(root *TreeNode) {
 	}
 
 }
+
+func SumOfLeaf(root *TreeNode) {
+	var stack []*TreeNode
+	curr := root
+	var sum int
+	for curr != nil || len(stack) != 0 {
+		for curr != nil {
+			stack = append(stack, curr)
+			curr = curr.left
+		}
+		curr = stack[len(stack)-1]   //fetching value
+		stack = stack[:len(stack)-1] //stack pop
+		if curr.left == nil && curr.right == nil {
+			sum = sum + curr.data
+		}
+		curr = curr.right
+	}
+	fmt.Println(sum)
+}
