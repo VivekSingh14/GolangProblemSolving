@@ -103,6 +103,8 @@ func main() {
 	fmt.Println(HeightOfTree(root))
 	fmt.Println("\n-------Level Order--------")
 	LevelOrderTraversal(root)
+	fmt.Println("\n-------Sum of leaf Nodes--------")
+	SumOfLeaf(root)
 
 }
 
