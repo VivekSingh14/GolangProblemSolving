@@ -16,13 +16,17 @@ func main() {
 	heapArr = append(heapArr, 20)
 
 	//to be inserted in heap
-	heapArr = append(heapArr, 50)
+	heapArr = append(heapArr, 45)
 
 	//fmt.Println(heapArr[10])
 	//fmt.Println(len(heapArr))
 	//fmt.Println(cap(heapArr))
 
-	res := InsertInHeap(heapArr, 10)
+	var res []int
+
+	for i := 2; i < len(heapArr); i++ {
+		res = InsertInHeap(heapArr, i)
+	}
 
 	fmt.Println(res)
 }
