@@ -18,12 +18,26 @@ func main() {
 	//to be inserted in heap
 	heapArr = append(heapArr, 50)
 
-	fmt.Println(heapArr)
-	fmt.Println(len(heapArr))
-	fmt.Println(cap(heapArr))
+	//fmt.Println(heapArr[10])
+	//fmt.Println(len(heapArr))
+	//fmt.Println(cap(heapArr))
+
+	res := InsertInHeap(heapArr, 10)
+
+	fmt.Println(res)
 }
 
-func InsertInHeap(arr []int, key int) []int {
+func InsertInHeap(arr []int, n int) []int {
 
-	return nil
+	i := n
+	temp := arr[n]
+
+	for i > 1 && temp > arr[i/2] {
+
+		arr[i] = arr[i/2]
+
+		i = i / 2
+	}
+	arr[i] = temp
+	return arr
 }
