@@ -62,29 +62,31 @@ func InsertInMaxHeap(arr []int, n int) []int {
 	return arr
 }
 
-func DeleteFromMaxHeap(arr []int, n int) int {
-	val := arr[1]
-	x := arr[n]
-	arr[1] = arr[n]
-	arr[n] = val
-	i := 1
-	j := 2 * i
-
+func DeleteFromMaxHeap(A []int, n int) int {
+	var i int
+	var j int
+	//var x int
+	var temp int
+	var val int
+	val = A[1]
+	//x = A[n]
+	A[1] = A[n]
+	A[n] = val
+	i = 1
+	j = i * 2
 	for j <= n-1 {
-		if j < n-1 && arr[j+1] > arr[j] {
+		if j < n-1 && A[j+1] > A[j] {
 			j = j + 1
-		}
-
-		if arr[i] < arr[j] {
-			temp := arr[i]
-			arr[i] = arr[j]
-			arr[j] = temp
-
-			i = j
-			j = 2 * j
-		} else {
-			break
+			if A[i] < A[j] {
+				temp = A[i]
+				A[i] = A[j]
+				A[j] = temp
+				i = j
+				j = 2 * j
+			} else {
+				break
+			}
 		}
 	}
-	return x
+	return val
 }
