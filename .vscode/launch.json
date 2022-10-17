@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "recursion/TableOfNum.go",
+            "program": "recursion/Factorial.go",
             "buildFlags": "-tags dynamic"
         }
     ]
