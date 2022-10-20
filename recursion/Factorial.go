@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main4() {
 	num := 5
 	fmt.Println(Factorial(num))
 }
