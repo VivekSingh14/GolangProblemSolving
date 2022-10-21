@@ -3,15 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	num := 5
-	fmt.Println(NthFibonacci(num, 1))
+	num := 85
+	fmt.Println(NthFibonacci(num))
 }
 
-func NthFibonacci(num int, fib int) int {
+func NthFibonacci(num int) int {
 
-	if num > 0 {
-		fib = fib + 1
-		return NthFibonacci(num-1, fib)
+	if num <= 1 {
+		return num
 	}
-	return 1
+	return NthFibonacci(num-1) + NthFibonacci(num-2)
 }
