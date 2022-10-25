@@ -21,7 +21,7 @@ import "fmt"
 // |V| = 5
 // |E| = 7
 
-func main() {
+func main1() {
 	//NoOfVertices := 5
 	adjMat := [6][6]int{}
 

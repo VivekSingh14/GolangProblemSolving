@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "GraphLearn/Graph1.go",
+            "program": "GraphLearn/Graph2.go",
             "buildFlags": "-tags dynamic"
         }
     ]
