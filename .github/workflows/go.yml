@@ -19,7 +19,7 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: go build -v DataStructures/BinaryHeap.go
+      run: go build -v GraphLearn/Graph2.go
 
     - name: Test
-      run: go test -v DataStructures/BinaryHeap.go
+      run: go test -v GraphLearn/Graph2.go
