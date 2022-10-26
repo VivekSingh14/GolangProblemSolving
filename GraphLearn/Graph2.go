@@ -26,7 +26,7 @@ func main() {
 	// for i := range adjMat {
 	// 	adjMat[i] = make([]int, NoOfVertices)
 	// }
-
+	// adding the comment
 	adjMat[1][2] = 8
 	adjMat[1][4] = 3
 	adjMat[2][3] = 9
