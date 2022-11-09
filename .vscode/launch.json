@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "GraphLearn/Graph2.go",
+            "program": "FinalRevision/LongestSubstringKUniqueChars.go",
             "buildFlags": "-tags dynamic"
         }
     ]
