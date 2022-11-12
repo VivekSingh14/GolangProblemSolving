@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "FinalRevision/LongestSubstringKUniqueChars.go",
+            "program": "FinalRevision/LongestSeqofOnes.go",
             "buildFlags": "-tags dynamic"
         }
     ]
