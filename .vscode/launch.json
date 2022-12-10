@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "FinalRevision/LongestSeqofOnes.go",
+            "program": "Concurrency/goroutineExample2.go",
             "buildFlags": "-tags dynamic"
         }
     ]

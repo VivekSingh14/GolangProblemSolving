@@ -22,6 +22,6 @@ func execute() {
 	go runner2(wg)
 	wg.Wait()
 }
-func main() {
+func main7() {
 	execute()
 }
