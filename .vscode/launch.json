@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "Concurrency/goroutineExample2.go",
+            "program": "DataStructures/BSTRevision.go",
             "buildFlags": "-tags dynamic"
         }
     ]

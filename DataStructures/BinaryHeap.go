@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main5() {
 	heapArr := make([]int, 0)
 	heapArr = append(heapArr, 0)
 	heapArr = append(heapArr, 14)

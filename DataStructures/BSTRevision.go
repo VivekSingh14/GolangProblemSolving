@@ -73,7 +73,7 @@ func LeafNode(root *TreeNode) {
 
 }
 
-func main5() {
+func main() {
 	var root *TreeNode
 
 	root = Insert(root, 4)
@@ -102,9 +102,12 @@ func main5() {
 	fmt.Println("\n-------Height of tree: --------")
 	fmt.Println(HeightOfTree(root))
 	fmt.Println("\n-------Level Order--------")
-	LevelOrderTraversal(root)
+	arr := LevelOrderTraversal(root)
 	fmt.Println("\n-------Sum of leaf Nodes--------")
 	SumOfLeaf(root)
+	fmt.Println("\n-------Cousins of given node--------")
+	cousins := FindCousin(arr, 5)
+	fmt.Println(cousins)
 
 }
 
@@ -190,8 +193,10 @@ func HeightOfTree(root *TreeNode) int {
 	return 0
 }
 
-func LevelOrderTraversal(root *TreeNode) {
+func LevelOrderTraversal(root *TreeNode) []int {
 	var queue1 []*TreeNode
+	var data []int
+	data = append(data, 0)
 	temp := root
 	queue1 = append(queue1, temp)
 
@@ -199,14 +204,16 @@ func LevelOrderTraversal(root *TreeNode) {
 
 		temp = queue1[0]
 		queue1 = queue1[1:]
-		fmt.Print(temp.data, " ")
+		//for displaying
+		//fmt.Print(temp.data, " ")
+		data = append(data, temp.data)
 		if temp.left != nil || temp.right != nil {
 			queue1 = append(queue1, temp.left)
 			queue1 = append(queue1, temp.right)
 		}
 
 	}
-
+	return data
 }
 
 func SumOfLeaf(root *TreeNode) {
@@ -226,4 +233,28 @@ func SumOfLeaf(root *TreeNode) {
 		curr = curr.right
 	}
 	fmt.Println(sum)
+}
+
+func FindCousin(tree []int, data int) []int {
+	var cousins []int
+	for i := 1; i < len(tree)/2; i++ {
+		//loop will go till len/2 because leftchild and rightchild can go before that only, for proof check below 2 statements
+		leftchild := tree[2*i]
+		rightchild := tree[2*i+1]
+		if (data == leftchild || data == rightchild) && i > 1 {
+			//now we will find grand parent of data
+			grandparentPosition := i / 2
+			var childOfGrandParent int
+			if data > tree[grandparentPosition] {
+				childOfGrandParent = (2 * grandparentPosition)
+			} else {
+				childOfGrandParent = (2 * grandparentPosition) + 1
+			}
+			cousins = append(cousins, tree[childOfGrandParent*2])
+			cousins = append(cousins, tree[(childOfGrandParent*2)+1])
+
+		}
+	}
+	//finding the parent of given node
+	return cousins
 }
