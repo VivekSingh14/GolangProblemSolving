@@ -103,6 +103,8 @@ func main() {
 	fmt.Println(HeightOfTree(root))
 	fmt.Println("\n-------Level Order--------")
 	arr := LevelOrderTraversal(root)
+	fmt.Println("\n-------Right View of tree--------")
+	RightViewOfTree(root)
 	fmt.Println("\n-------Sum of leaf Nodes--------")
 	SumOfLeaf(root)
 	fmt.Println("\n-------Cousins of given node--------")
@@ -257,4 +259,30 @@ func FindCousin(tree []int, data int) []int {
 	}
 	//finding the parent of given node
 	return cousins
+}
+
+func RightViewOfTree(root *TreeNode) {
+	var que []*TreeNode
+	temp := root
+
+	que = append(que, temp)
+
+	for len(que) != 0 {
+		size := len(que)
+		for i := 0; i < size; {
+			i++
+			curr := que[0]
+			que = que[1:]
+			if i == size {
+				fmt.Print(curr.data, " ")
+			}
+			if curr.left != nil {
+				que = append(que, curr.left)
+			}
+			if curr.right != nil {
+				que = append(que, curr.right)
+			}
+
+		}
+	}
 }
