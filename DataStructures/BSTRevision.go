@@ -2,14 +2,16 @@ package main
 
 import "fmt"
 
+//added hd variable because we want to find out horizontal distance between nodes
 type TreeNode struct {
 	left  *TreeNode
 	data  int
+	hd    int
 	right *TreeNode
 }
 
 func Insert(root *TreeNode, key int) *TreeNode {
-	newNode := TreeNode{nil, key, nil}
+	newNode := TreeNode{nil, key, 0, nil}
 	if root == nil {
 		root = &newNode
 		return root
@@ -103,6 +105,7 @@ func main() {
 	fmt.Println(HeightOfTree(root))
 	fmt.Println("\n-------Level Order--------")
 	arr := LevelOrderTraversal(root)
+	fmt.Println(arr)
 	fmt.Println("\n-------Right View of tree--------")
 	RightViewOfTree(root)
 	fmt.Println("\n-------Sum of leaf Nodes--------")
@@ -110,6 +113,8 @@ func main() {
 	fmt.Println("\n-------Cousins of given node--------")
 	cousins := FindCousin(arr, 5)
 	fmt.Println(cousins)
+	fmt.Println("\n---------Bottom view of tree------------")
+	BottomViewOfTree(root)
 
 }
 
@@ -285,4 +290,34 @@ func RightViewOfTree(root *TreeNode) {
 
 		}
 	}
+}
+
+func BottomViewOfTree(root *TreeNode) {
+	var queue2 []*TreeNode
+	map1 := make(map[int]int)
+	temp := root
+
+	queue2 = append(queue2, temp)
+
+	for len(queue2) != 0 {
+
+		temp = queue2[0]
+		queue2 = queue2[1:]
+		tempHd := temp.hd
+		map1[tempHd] = temp.data
+
+		if temp.left != nil {
+			temp.left.hd = tempHd - 1
+			queue2 = append(queue2, temp.left)
+		}
+		if temp.right != nil {
+			temp.right.hd = tempHd + 1
+			queue2 = append(queue2, temp.right)
+		}
+
+	}
+	for _, element := range map1 {
+		fmt.Print(" ", element, " ")
+	}
+	fmt.Println()
 }
