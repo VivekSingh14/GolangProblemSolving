@@ -115,6 +115,8 @@ func main() {
 	fmt.Println(cousins)
 	fmt.Println("\n---------Bottom view of tree------------")
 	BottomViewOfTree(root)
+	fmt.Println("\n---------Top view of tree------------")
+	TopViewOfTree(root)
 
 }
 
@@ -304,8 +306,40 @@ func BottomViewOfTree(root *TreeNode) {
 		temp = queue2[0]
 		queue2 = queue2[1:]
 		tempHd := temp.hd
-		map1[tempHd] = temp.data
 
+		map1[tempHd] = temp.data
+		if temp.left != nil {
+			temp.left.hd = tempHd - 1
+			queue2 = append(queue2, temp.left)
+		}
+		if temp.right != nil {
+			temp.right.hd = tempHd + 1
+			queue2 = append(queue2, temp.right)
+		}
+
+	}
+	for _, element := range map1 {
+		fmt.Print(" ", element, " ")
+	}
+	fmt.Println()
+}
+
+func TopViewOfTree(root *TreeNode) {
+	var queue2 []*TreeNode
+	map1 := make(map[int]int)
+	temp := root
+
+	queue2 = append(queue2, temp)
+
+	for len(queue2) != 0 {
+
+		temp = queue2[0]
+		queue2 = queue2[1:]
+		tempHd := temp.hd
+		//main condition to check if top view will be udpated or not
+		if _, ok := map1[tempHd]; !ok {
+			map1[tempHd] = temp.data
+		}
 		if temp.left != nil {
 			temp.left.hd = tempHd - 1
 			queue2 = append(queue2, temp.left)
