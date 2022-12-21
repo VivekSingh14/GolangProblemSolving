@@ -117,6 +117,8 @@ func main() {
 	BottomViewOfTree(root)
 	fmt.Println("\n---------Top view of tree------------")
 	TopViewOfTree(root)
+	fmt.Println("\n---------Max depth or height using level order traversal and queue------------")
+	fmt.Println(MaxDepthOrHeight(root))
 
 }
 
@@ -354,4 +356,37 @@ func TopViewOfTree(root *TreeNode) {
 		fmt.Print(" ", element, " ")
 	}
 	fmt.Println()
+}
+
+func MaxDepthOrHeight(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	var que []*TreeNode
+	temp := root
+	depth := 0
+	que = append(que, temp)
+	que = append(que, nil)
+	for len(que) != 0 {
+
+		temp = que[0]
+		que = que[1:]
+		if temp == nil {
+			depth = depth + 1
+		}
+		if temp != nil {
+
+			if temp.left != nil {
+				que = append(que, temp.left)
+
+			}
+			if temp.right != nil {
+				que = append(que, temp.right)
+			}
+		} else if len(que) != 0 {
+			que = append(que, nil)
+		}
+
+	}
+	return depth
 }
