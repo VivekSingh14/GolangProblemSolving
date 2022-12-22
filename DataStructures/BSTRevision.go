@@ -119,6 +119,9 @@ func main() {
 	TopViewOfTree(root)
 	fmt.Println("\n---------Max depth or height using level order traversal and queue------------")
 	fmt.Println(MaxDepthOrHeight(root))
+	fmt.Println("\n-------Level Order with multi dimensional slice--------")
+	arr1 := LevelOrderTraversal1(root)
+	fmt.Println(arr1)
 
 }
 
@@ -389,4 +392,39 @@ func MaxDepthOrHeight(root *TreeNode) int {
 
 	}
 	return depth
+}
+
+func LevelOrderTraversal1(root *TreeNode) [][]int {
+	var queue1 []*TreeNode
+	maindata := make([][]int, 0)
+	temp := root
+	queue1 = append(queue1, temp)
+	queue1 = append(queue1, nil)
+	var data1 []int
+	for len(queue1) != 0 {
+
+		temp = queue1[0]
+		queue1 = queue1[1:]
+
+		if temp == nil {
+			maindata = append(maindata, data1)
+
+			data1 = nil
+		} else {
+			data1 = append(data1, temp.data)
+		}
+
+		if temp != nil {
+			if temp.left != nil {
+				queue1 = append(queue1, temp.left)
+			}
+			if temp.right != nil {
+				queue1 = append(queue1, temp.right)
+			}
+		} else if len(queue1) != 0 {
+			queue1 = append(queue1, nil)
+		}
+
+	}
+	return maindata
 }
