@@ -123,9 +123,10 @@ func main() {
 	arr1 := LevelOrderTraversal1(root)
 	fmt.Println(arr1)
 	fmt.Println("\n-------array to bst--------")
-	arr123 := []int{1, 2, 3, 4, 5, 6, 7}
+	arr123 := []int{1, 2, 3, 4, 1, 2, 3}
 	no := sortedArrayToBST(arr123, 0, len(arr123)-1)
 	InOrderUsingIteration(no)
+	fmt.Println(IsSymmetric(no))
 
 }
 
@@ -455,4 +456,32 @@ func sortedArrayToBST(nums []int, first int, last int) *TreeNode {
 
 	return &root
 
+}
+
+func IsSymmetric(root *TreeNode) bool {
+
+	var stack1 []*TreeNode
+	var stack2 []*TreeNode
+	curr := root
+	curr2 := root
+
+	for curr != nil || len(stack1) != 0 {
+		for curr != nil {
+			stack1 = append(stack1, curr)
+			stack2 = append(stack2, curr2)
+			curr = curr.left
+			curr2 = curr2.left
+		}
+		curr = stack1[len(stack1)-1]    //fetching value
+		stack1 = stack1[:len(stack1)-1] //stack pop
+		curr2 = stack2[len(stack2)-1]   //fetching value
+		stack2 = stack2[:len(stack2)-1] //stack pop
+		if curr.data != curr2.data {
+			return false
+		}
+		curr = curr.right
+		curr2 = curr2.right
+	}
+
+	return true
 }
