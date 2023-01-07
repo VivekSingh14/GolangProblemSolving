@@ -122,6 +122,10 @@ func main() {
 	fmt.Println("\n-------Level Order with multi dimensional slice--------")
 	arr1 := LevelOrderTraversal1(root)
 	fmt.Println(arr1)
+	fmt.Println("\n-------array to bst--------")
+	arr123 := []int{8, 4, 2, 5, 1, 3, 10}
+	no := sortedArrayToBST(arr123)
+	fmt.Println(no)
 
 }
 
@@ -427,4 +431,27 @@ func LevelOrderTraversal1(root *TreeNode) [][]int {
 
 	}
 	return maindata
+}
+
+func sortedArrayToBST(nums []int) *TreeNode {
+
+	if len(nums) == 0 {
+		return nil
+	}
+	low := 0
+	high := len(nums) - 1
+	if low > high {
+		return nil
+	}
+
+	mid := (low + high) / 2
+
+	root := TreeNode{nil, nums[mid], 0, nil}
+	arr1 := nums[:mid]
+	root.left = sortedArrayToBST(arr1)
+	arr2 := nums[mid:]
+	root.right = sortedArrayToBST(arr2)
+
+	return &root
+
 }
