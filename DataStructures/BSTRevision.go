@@ -123,9 +123,9 @@ func main() {
 	arr1 := LevelOrderTraversal1(root)
 	fmt.Println(arr1)
 	fmt.Println("\n-------array to bst--------")
-	arr123 := []int{8, 4, 2, 5, 1, 3, 10}
-	no := sortedArrayToBST(arr123)
-	fmt.Println(no)
+	arr123 := []int{1, 2, 3, 4, 5, 6, 7}
+	no := sortedArrayToBST(arr123, 0, len(arr123)-1)
+	InOrderUsingIteration(no)
 
 }
 
@@ -433,24 +433,25 @@ func LevelOrderTraversal1(root *TreeNode) [][]int {
 	return maindata
 }
 
-func sortedArrayToBST(nums []int) *TreeNode {
+func sortedArrayToBST(nums []int, first int, last int) *TreeNode {
 
 	if len(nums) == 0 {
 		return nil
 	}
-	low := 0
-	high := len(nums) - 1
-	if low > high {
+	if first > last {
 		return nil
 	}
+	if first == last {
+		return &TreeNode{nil, nums[first], 0, nil}
+	}
 
-	mid := (low + high) / 2
+	mid := (first + last) / 2
 
 	root := TreeNode{nil, nums[mid], 0, nil}
-	arr1 := nums[:mid]
-	root.left = sortedArrayToBST(arr1)
-	arr2 := nums[mid:]
-	root.right = sortedArrayToBST(arr2)
+
+	root.left = sortedArrayToBST(nums, first, mid-1)
+
+	root.right = sortedArrayToBST(nums, mid+1, last)
 
 	return &root
 
