@@ -126,6 +126,7 @@ func main() {
 	arr123 := []int{1, 2, 3}
 	no := sortedArrayToBST(arr123, 0, len(arr123)-1)
 	InOrderUsingIteration(no)
+	fmt.Println("\n-------if tree is symmetric--------")
 	fmt.Println(IsSymmetric(no))
 
 }
