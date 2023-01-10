@@ -460,7 +460,7 @@ func sortedArrayToBST(nums []int, first int, last int) *TreeNode {
 }
 
 func IsSymmetric(root *TreeNode) bool {
-
+	//checking if tree symmetric or not
 	var queu []*TreeNode
 	temp := root
 	queu = append(queu, temp.left)
