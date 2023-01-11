@@ -128,6 +128,8 @@ func main() {
 	InOrderUsingIteration(no)
 	fmt.Println("\n-------if tree is symmetric--------")
 	fmt.Println(IsSymmetric(no))
+	fmt.Println("\n-------k th smallest element--------")
+	fmt.Println(KthSmallest(root, 3))
 
 }
 
@@ -491,4 +493,28 @@ func IsSymmetric(root *TreeNode) bool {
 
 	}
 	return true
+}
+
+func KthSmallest(root *TreeNode, k int) int {
+
+	var stack []*TreeNode
+
+	temp := root
+	stack = append(stack, temp)
+	temp = temp.left
+	count := 1
+	for temp != nil || len(stack) != 0 {
+		for temp != nil {
+			stack = append(stack, temp)
+			temp = temp.left
+		}
+		temp = stack[len(stack)-1]   //fetching value
+		stack = stack[:len(stack)-1] //stack pop
+		if count == k {
+			return temp.data
+		}
+		temp = temp.right
+		count = count + 1
+	}
+	return 0
 }
