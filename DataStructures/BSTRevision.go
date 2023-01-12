@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //added hd variable because we want to find out horizontal distance between nodes
 type TreeNode struct {
@@ -130,6 +132,9 @@ func main() {
 	fmt.Println(IsSymmetric(no))
 	fmt.Println("\n-------k th smallest element--------")
 	fmt.Println(KthSmallest(root, 3))
+
+	fmt.Println("\n-------Zig Zag inorder--------")
+	fmt.Println(ZigZagLevelOrder(root))
 
 }
 
@@ -517,4 +522,57 @@ func KthSmallest(root *TreeNode, k int) int {
 		count = count + 1
 	}
 	return 0
+}
+
+func ZigZagLevelOrder(root *TreeNode) [][]int {
+
+	var queue1 []*TreeNode
+	maindata := make([][]int, 0)
+	temp := root
+	queue1 = append(queue1, temp)
+	queue1 = append(queue1, nil)
+	var data1 []int
+	count := 1
+	for len(queue1) != 0 {
+
+		temp = queue1[0]
+		queue1 = queue1[1:]
+
+		if count%2 == 0 {
+			if temp == nil {
+
+				maindata = append(maindata, data1)
+
+				data1 = nil
+			} else {
+				data1 = append(data1, temp.data)
+			}
+			count = count + 1
+		} else {
+			if temp == nil {
+				for i, j := 0, len(data1)-1; i < j; i, j = i+1, j-1 {
+					data1[i], data1[j] = data1[j], data1[i]
+				}
+				maindata = append(maindata, data1)
+
+				data1 = nil
+			} else {
+				data1 = append(data1, temp.data)
+			}
+			count = count + 1
+		}
+
+		if temp != nil {
+			if temp.left != nil {
+				queue1 = append(queue1, temp.left)
+			}
+			if temp.right != nil {
+				queue1 = append(queue1, temp.right)
+			}
+		} else if len(queue1) != 0 {
+			queue1 = append(queue1, nil)
+		}
+
+	}
+	return maindata
 }
