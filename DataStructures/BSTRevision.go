@@ -532,34 +532,17 @@ func ZigZagLevelOrder(root *TreeNode) [][]int {
 	queue1 = append(queue1, temp)
 	queue1 = append(queue1, nil)
 	var data1 []int
-	count := 1
 	for len(queue1) != 0 {
 
 		temp = queue1[0]
 		queue1 = queue1[1:]
 
-		if count%2 == 0 {
-			if temp == nil {
+		if temp == nil {
+			maindata = append(maindata, data1)
 
-				maindata = append(maindata, data1)
-
-				data1 = nil
-			} else {
-				data1 = append(data1, temp.data)
-			}
-			count = count + 1
+			data1 = nil
 		} else {
-			if temp == nil {
-				for i, j := 0, len(data1)-1; i < j; i, j = i+1, j-1 {
-					data1[i], data1[j] = data1[j], data1[i]
-				}
-				maindata = append(maindata, data1)
-
-				data1 = nil
-			} else {
-				data1 = append(data1, temp.data)
-			}
-			count = count + 1
+			data1 = append(data1, temp.data)
 		}
 
 		if temp != nil {
@@ -574,5 +557,16 @@ func ZigZagLevelOrder(root *TreeNode) [][]int {
 		}
 
 	}
+
+	for i := 0; i < len(maindata); i++ {
+
+		if i%2 != 0 {
+			for i2, j := 0, len(maindata[i])-1; i2 < j; i2, j = i2+1, j-1 {
+				maindata[i][i2], maindata[i][j] = maindata[i][j], maindata[i][i2]
+			}
+		}
+
+	}
+
 	return maindata
 }
