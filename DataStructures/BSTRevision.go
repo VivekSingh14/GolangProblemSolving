@@ -570,3 +570,7 @@ func ZigZagLevelOrder(root *TreeNode) [][]int {
 
 	return maindata
 }
+
+func PopulatingNextpointer(root *TreeNode) *TreeNode {
+	return nil
+}
