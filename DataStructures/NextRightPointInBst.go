@@ -35,9 +35,28 @@ func main() {
 	root = Insert1(root, 5)
 	root = Insert1(root, 7)
 
-	fmt.Println(root)
+	//fmt.Println(root)
+	LevelOrderTraversalNew(root)
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
+
+	var que []*TreeNode1
+	var data []int
+	temp := root
+	que = append(que, temp)
+	for len(que) > 0 {
+		tempdata := que[0]
+		que = que[1:]
+		data = append(data, tempdata.data)
+		if tempdata.left != nil {
+			que = append(que, tempdata.left)
+		}
+		if tempdata.right != nil {
+			que = append(que, tempdata.right)
+		}
+	}
+	fmt.Println(data)
+
 	return nil
 }
