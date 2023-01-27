@@ -37,18 +37,55 @@ func main() {
 
 	//fmt.Println(root)
 	LevelOrderTraversalNew(root)
+
+	LevelOrderTraversaltest(root)
+
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
 
+	if root == nil {
+		return nil
+	}
+
 	var que []*TreeNode1
-	var data []int
+	temp := root
+	que = append(que, temp)
+	for len(que) > 0 {
+		var row []*TreeNode1
+		cnt := len(que)
+		for cnt > 0 {
+			cnt = cnt - 1
+			tempdata := que[0]
+			que = que[1:]
+			row = append(row, tempdata)
+			if tempdata.left != nil {
+				que = append(que, tempdata.left)
+			}
+			if tempdata.right != nil {
+				que = append(que, tempdata.right)
+			}
+			for i := 0; i < len(row)-1; i++ {
+				row[i].next = row[i+1]
+			}
+		}
+	}
+	//fmt.Println(data)
+
+	return root
+}
+
+func LevelOrderTraversaltest(root *TreeNode1) *TreeNode1 {
+
+	var que []*TreeNode1
+	//var data []int
 	temp := root
 	que = append(que, temp)
 	for len(que) > 0 {
 		tempdata := que[0]
 		que = que[1:]
-		data = append(data, tempdata.data)
+		//data = append(data, tempdata.data)
+		fmt.Println(tempdata.next)
 		if tempdata.left != nil {
 			que = append(que, tempdata.left)
 		}
@@ -56,7 +93,7 @@ func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
 			que = append(que, tempdata.right)
 		}
 	}
-	fmt.Println(data)
+	//fmt.Println(data)
 
 	return nil
 }
