@@ -49,7 +49,6 @@ func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
 	}
 
 	var que []*TreeNode1
-	//var data []int
 	temp := root
 	que = append(que, temp)
 	for len(que) > 0 {
@@ -59,7 +58,6 @@ func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
 			cnt = cnt - 1
 			tempdata := que[0]
 			que = que[1:]
-			//data = append(data, tempdata.data)
 			row = append(row, tempdata)
 			if tempdata.left != nil {
 				que = append(que, tempdata.left)
