@@ -40,6 +40,11 @@ func main() {
 
 	LevelOrderTraversaltest(root)
 
+	fmt.Println("******************")
+
+	nums := []int{1, 2, 3, 1}
+	fmt.Println(containsDuplicate(nums))
+
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
@@ -96,4 +101,24 @@ func LevelOrderTraversaltest(root *TreeNode1) *TreeNode1 {
 	//fmt.Println(data)
 
 	return nil
+}
+
+func containsDuplicate(nums []int) bool {
+	map1 := make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		val, ok := map1[nums[i]]
+		if ok {
+			val = val + 1
+			map1[nums[i]] = val
+		} else {
+			map1[nums[i]] = 1
+		}
+	}
+	for _, i := range map1 {
+		if i > 1 {
+			return true
+		}
+	}
+	return false
+
 }
