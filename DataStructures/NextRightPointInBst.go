@@ -45,6 +45,9 @@ func main() {
 	nums := []int{1, 2, 3, 1}
 	fmt.Println(containsDuplicate(nums))
 
+	arr := []byte{'a', 'b', 'c'}
+	reverseString(arr)
+
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
@@ -121,4 +124,29 @@ func containsDuplicate(nums []int) bool {
 	}
 	return false
 
+}
+
+func reverseString(s []byte) {
+	max := len(s) - 1
+	y := max
+	for i := 0; i <= max/2; i++ {
+		temp := s[i]
+		s[i] = s[y]
+		s[y] = temp
+		y = y - 1
+	}
+	fmt.Println(s)
+
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%c", s[i])
+	}
+
+}
+
+func maxSlidingWindow(nums []int, k int) []int {
+
+	for i := 0; i < k; i++ {
+
+	}
+	return nil
 }
