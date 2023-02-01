@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type TreeNode1 struct {
 	left  *TreeNode1
@@ -47,6 +50,9 @@ func main() {
 
 	arr := []byte{'a', 'b', 'c'}
 	reverseString(arr)
+
+	fmt.Println("********reverse integer**********")
+	fmt.Println(reverse(-356))
 
 }
 
@@ -149,4 +155,25 @@ func maxSlidingWindow(nums []int, k int) []int {
 
 	}
 	return nil
+}
+
+func reverse(x int) int {
+	temp := x
+	min, max := math.MinInt32, math.MaxInt32
+	var newnum int
+	if temp < 0 {
+		temp = -temp
+	}
+	for temp > 0 {
+
+		newnum = 10*newnum + temp%10
+		temp = temp / 10
+	}
+	if newnum < min || newnum > max {
+		return 0
+	}
+	if x < 0 {
+		return -newnum
+	}
+	return newnum
 }
