@@ -54,6 +54,10 @@ func main() {
 	fmt.Println("********reverse integer**********")
 	fmt.Println(reverse(-356))
 
+	fmt.Println("********digits to number**********")
+	nums1 := []int{9, 9, 9, 9}
+	fmt.Println(plusOne(nums1))
+
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
@@ -176,4 +180,21 @@ func reverse(x int) int {
 		return -newnum
 	}
 	return newnum
+}
+
+func plusOne(digits []int) []int {
+
+	maxlength := len(digits)
+	digits[maxlength-1] = digits[maxlength-1] + 1
+	for i := maxlength - 1; i > 0; i-- {
+		if digits[i] == 10 {
+			digits[i] = 0
+			digits[i-1] = digits[i-1] + 1
+		}
+	}
+	if digits[0] == 10 {
+		digits[0] = 1
+		digits = append(digits, 0)
+	}
+	return digits
 }
