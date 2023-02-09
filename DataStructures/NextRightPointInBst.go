@@ -58,6 +58,16 @@ func main() {
 	nums1 := []int{9, 9, 9, 9}
 	fmt.Println(plusOne(nums1))
 
+	fmt.Println("********strings are anagram **********")
+	str1 := ""
+	str2 := "l"
+	fmt.Println(isAnagram(str1, str2))
+
+	fmt.Println("******** first unique chars **********")
+	str3 := "loveleetcode"
+
+	fmt.Println(firstUniqChar(str3))
+
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
@@ -153,14 +163,6 @@ func reverseString(s []byte) {
 
 }
 
-func maxSlidingWindow(nums []int, k int) []int {
-
-	for i := 0; i < k; i++ {
-
-	}
-	return nil
-}
-
 func reverse(x int) int {
 	temp := x
 	min, max := math.MinInt32, math.MaxInt32
@@ -197,4 +199,47 @@ func plusOne(digits []int) []int {
 		digits = append(digits, 0)
 	}
 	return digits
+}
+
+func isAnagram(s string, t string) bool {
+	if len(s) != len(t) {
+		return false
+	}
+	var arr [26]int
+	var arr1 [26]int
+
+	for i := 0; i < len(s); i++ {
+		arr[s[i]-97] = arr[s[i]-97] + 1
+	}
+
+	for i := 0; i < len(t); i++ {
+		arr1[t[i]-97] = arr1[t[i]-97] + 1
+	}
+
+	for i := 0; i < len(arr); i++ {
+		if arr[i] != arr1[i] {
+			return false
+		}
+	}
+
+	return true
+}
+
+func firstUniqChar(s string) int {
+	var arr [26]int
+
+	if len(s) == 1 {
+		return 0
+	}
+
+	for i := 0; i < len(s); i++ {
+		arr[s[i]-97] = arr[s[i]-97] + 1
+	}
+
+	for i := 0; i < len(s); i++ {
+		if arr[s[i]-97] == 1 {
+			return i
+		}
+	}
+	return -1
 }
