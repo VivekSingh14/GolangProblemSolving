@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main31() {
 
 	var map1 map[int]string = map[int]string{
 		1: "Delhi",

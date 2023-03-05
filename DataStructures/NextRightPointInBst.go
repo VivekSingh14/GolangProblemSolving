@@ -68,6 +68,10 @@ func main() {
 
 	fmt.Println(firstUniqChar(str3))
 
+	fmt.Println("******** max in array **********")
+	nums2 := []int{1, 3, -1, -3, 5, 3, 6, 7}
+	fmt.Println(maxSlidingWindow(nums2, 3))
+
 }
 
 func LevelOrderTraversalNew(root *TreeNode1) *TreeNode1 {
@@ -242,4 +246,30 @@ func firstUniqChar(s string) int {
 		}
 	}
 	return -1
+}
+
+func maxSlidingWindow(nums []int, k int) []int {
+	var res []int
+
+	start := 0
+	end := k
+
+	res = append(res, findmax(nums, start, end))
+
+	for j := k; j < len(nums); j++ {
+		start = start + 1
+		end = j + 1
+		res = append(res, findmax(nums, start, end))
+	}
+
+	return res
+}
+func findmax(temp []int, start int, end int) int {
+	max := math.MinInt
+	for i := start; i < end; i++ {
+		if temp[i] > max {
+			max = temp[i]
+		}
+	}
+	return max
 }
