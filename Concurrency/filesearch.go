@@ -7,7 +7,7 @@ import (
 	"sync"
 )
 
-func main1() {
+func main3() {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
 		panic(err)

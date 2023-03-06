@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "handsOn/InterfaceLearn.go",
+            "program": "Concurrency/goroutineChannel.go",
             "buildFlags": "-tags dynamic"
         }
     ]
