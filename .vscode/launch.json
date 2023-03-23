@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "OOPsVisualize/InterfaceNode.go",
+            "program": "DLL/main.go",
             "buildFlags": "-tags dynamic"
         }
     ]
