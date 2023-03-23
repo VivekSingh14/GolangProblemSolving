@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "Concurrency/goroutineChannel.go",
+            "program": "OOPsVisualize/InterfaceNode.go",
             "buildFlags": "-tags dynamic"
         }
     ]
