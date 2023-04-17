@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "first/main.go",
+            "program": "leetcode/easyDP1lesscomplex.go",
             "buildFlags": "-tags dynamic"
         }
     ]
