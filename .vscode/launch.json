@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "leetcode/easyDP1lesscomplex.go",
+            "program": "leetcode/pairofelementwithKsum.go",
             "buildFlags": "-tags dynamic"
         }
     ]

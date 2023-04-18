@@ -1,11 +1,13 @@
 package main
 
+//largest sum subarray using kadane's algo with O(n) complexity
+
 import (
 	"fmt"
 	"math"
 )
 
-func main() {
+func main2() {
 
 	var arr []int = []int{5, 4, -1, 7, 8}
 	//

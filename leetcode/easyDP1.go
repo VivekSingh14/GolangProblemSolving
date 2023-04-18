@@ -1,4 +1,5 @@
 //n^2 complexity
+//largest sum subarray using naive approach
 package main
 
 import (
