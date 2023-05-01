@@ -13,7 +13,7 @@ func main5() {
 	batchSize := 5
 	Data1 := `{
   "alert_id": [
-    "ZS-CLOUD-AZURE-22,ZS-CLOUD-GCP-23,ZS-CLOUD-AWS-24,ZS-CLOUD-AWS-20,ZS-CLOUD-AWS-21,ZS-CLOUD-AWS-15,ZS-CLOUD-AWS-16,ZS-CLOUD-GCP-7,ZS-CLOUD-AZURE-14,ZS-CLOUD-AWS-17"
+    ""
   ]
 }`
 	err := json.Unmarshal([]byte(Data1), &alertList)
