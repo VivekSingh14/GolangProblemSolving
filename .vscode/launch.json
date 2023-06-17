@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "sliceProblems/removeElementnthPosSlice.go",
+            "program": "easyExamples/twoSum.go",
             "buildFlags": "-tags dynamic"
         }
     ]

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 	str := "aabacbebebe"
 	count := make([]int, 26)
 
