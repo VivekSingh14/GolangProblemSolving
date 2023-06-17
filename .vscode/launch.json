@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "sliceProblems/SendinBlue.go",
+            "program": "sliceProblems/removeElementnthPosSlice.go",
             "buildFlags": "-tags dynamic"
         }
     ]

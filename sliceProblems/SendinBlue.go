@@ -30,7 +30,7 @@ func repetition(st string) map[string]int {
 }
 
 // Main function
-func main() {
+func main2() {
 	input := "betty bought the butter , the butter was bitter , " +
 		"betty bought more butter to make the : bitter butter better"
 	for index, element := range repetition(input) {
