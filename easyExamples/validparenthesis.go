@@ -14,7 +14,7 @@ import "fmt"
 
 // approach to be followd:  using stack
 
-func main() {
+func main4() {
 
 	str := "(])"
 	fmt.Println(isValid(str))
