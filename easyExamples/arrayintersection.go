@@ -7,9 +7,10 @@ import "fmt"
 // constraint = if 1 <= nums1.length, nums2.length <= 10
 
 func main() {
-	arr1 := []int{4, 9, 5}
-	arr2 := []int{9, 4, 9, 8, 4}
+	arr1 := []int{1, 2, 2, 1}
+	arr2 := []int{2, 2}
 	fmt.Println(findintersectionsBruteF(arr1, arr2))
+	fmt.Println(findintersectionsHashTable(arr1, arr2))
 
 }
 
@@ -36,5 +37,45 @@ func findintersectionsBruteF(nums1 []int, nums2 []int) []int {
 			}
 		}
 	}
+	return temp
+}
+
+func findintersectionsHashTable(nums1 []int, nums2 []int) []int {
+
+	hashmap := make(map[int]int)
+	res := [1000]int{}
+	var temp []int
+	if len(nums1) > len(nums2) {
+		for i := 0; i < len(nums1); i++ {
+			if _, ok := hashmap[nums1[i]]; !ok {
+				hashmap[nums1[i]] = 1
+			}
+		}
+
+		for i := 0; i < len(nums2); i++ {
+			if _, ok := hashmap[nums2[i]]; ok {
+				res[nums2[i]] = 1
+			}
+		}
+	} else {
+		for i := 0; i < len(nums2); i++ {
+			if _, ok := hashmap[nums2[i]]; !ok {
+				hashmap[nums2[i]] = 1
+			}
+		}
+
+		for i := 0; i < len(nums1); i++ {
+			if _, ok := hashmap[nums1[i]]; ok {
+				res[nums1[i]] = 1
+			}
+		}
+	}
+
+	for i := 0; i < len(res); i++ {
+		if res[i] == 1 {
+			temp = append(temp, i)
+		}
+	}
+
 	return temp
 }
