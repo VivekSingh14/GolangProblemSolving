@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main3() {
 	arr := []int{2, 7, 11, 15}
 
 	target := 9
