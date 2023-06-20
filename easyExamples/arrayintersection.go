@@ -1,16 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 // /- find out intersection of two arrays -/ //
 
 // constraint = if 1 <= nums1.length, nums2.length <= 10
 
-func main() {
-	arr1 := []int{1, 2, 2, 1}
-	arr2 := []int{2, 2}
+func main5() {
+	arr2 := []int{1, 2, 2, 1}
+	arr1 := []int{2, 2}
 	fmt.Println(findintersectionsBruteF(arr1, arr2))
 	fmt.Println(findintersectionsHashTable(arr1, arr2))
+	fmt.Println(findintersectionsTwoPointer(arr1, arr2))
 
 }
 
@@ -78,4 +82,36 @@ func findintersectionsHashTable(nums1 []int, nums2 []int) []int {
 	}
 
 	return temp
+}
+
+func findintersectionsTwoPointer(nums1 []int, nums2 []int) []int {
+	var count []int
+	var res []int
+	sort.Slice(nums1, func(i, j int) bool {
+		return nums1[i] < nums1[j]
+	})
+
+	sort.Slice(nums2, func(i, j int) bool {
+		return nums2[i] < nums2[j]
+	})
+
+	i := 0
+	j := 0
+
+	for i < len(nums1) && j < len(nums2) {
+		if nums1[i] == nums2[j] {
+			count = append(count, i)
+			i = i + 1
+			j = j + 1
+		} else if nums1[i] < nums2[j] {
+			i = i + 1
+		} else {
+			j = j + 1
+		}
+	}
+
+	for i := 0; i < len(nums1); i++ {
+
+	}
+	return res
 }
