@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main3() {
 	arr := []int{0, 0, 1, 0, 1, 1, 1, 0, 1, 1}
 	var templen int
 	var max int
