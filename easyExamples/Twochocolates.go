@@ -8,7 +8,7 @@ import (
 // -- buy two chocolates from given chocolate options and initial amount will be given,
 // -- such that at the end of buying chocolates  you should have some amount or 0 debt.
 
-func main() {
+func main6() {
 	price := []int{3, 2, 3}
 	money := 3
 

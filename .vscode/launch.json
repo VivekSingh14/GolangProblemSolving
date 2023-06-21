@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/Twochocolates.go",
+            "program": "easyExamples/twooutofthree.go",
             "buildFlags": "-tags dynamic"
         }
     ]
