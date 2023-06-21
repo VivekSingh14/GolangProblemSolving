@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main7() {
 	nums1 := []int{1, 1, 3, 2}
 	nums2 := []int{2, 3}
 	nums3 := []int{3}
