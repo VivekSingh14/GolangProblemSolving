@@ -6,7 +6,7 @@ import "fmt"
 
 // two pointer algo because array of nums is already sorted.
 
-func main() {
+func main9() {
 	nums := []int{1, 1, 2}
 
 	fmt.Println(removeDuplicates(nums))
