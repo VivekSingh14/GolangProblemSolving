@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/removeDuplicates.go",
+            "program": "ProblemSolvingUpdated/TwoSum.go",
             "buildFlags": "-tags dynamic"
         }
     ]
