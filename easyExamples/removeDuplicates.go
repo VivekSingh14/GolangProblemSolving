@@ -7,10 +7,11 @@ import "fmt"
 // two pointer algo because array of nums is already sorted.
 
 func main() {
-	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+	nums := []int{1, 1, 2}
 
 	fmt.Println(removeDuplicates(nums))
 	fmt.Println(removeDuplicatesHashTable(nums))
+	fmt.Println(removeDuplicatesTwoPointer(nums))
 }
 
 func removeDuplicates(nums []int) int {
@@ -55,4 +56,21 @@ func removeDuplicatesHashTable(nums []int) int {
 
 	fmt.Println(res)
 	return len(res)
+}
+
+func removeDuplicatesTwoPointer(nums []int) int {
+
+	slow := 0
+	fast := 1
+
+	for fast < len(nums) {
+		if nums[slow] == nums[fast] {
+			fast = fast + 1
+		} else {
+			slow = slow + 1
+			nums[slow] = nums[fast]
+			fast = fast + 1
+		}
+	}
+	return slow + 1
 }
