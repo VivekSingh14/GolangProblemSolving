@@ -9,7 +9,7 @@ import (
 
 // constraint = if 1 <= nums1.length, nums2.length <= 10
 
-func main() {
+func main3() {
 	arr2 := []int{1, 2, 2, 1}
 	arr1 := []int{2, 2}
 	fmt.Println(findintersectionsBruteF(arr1, arr2))
