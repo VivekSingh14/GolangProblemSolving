@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/arrayintersection.go",
+            "program": "easyExamples/intersectiontwoArrayRev.go",
             "buildFlags": "-tags dynamic"
         }
     ]
