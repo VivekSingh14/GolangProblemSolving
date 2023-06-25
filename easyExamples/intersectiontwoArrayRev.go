@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main10() {
 	nums1 := []int{3, 4, 6, 2, 8, 5, 9}
 	nums2 := []int{6, 3, 2, 7, 5, 1}
 
