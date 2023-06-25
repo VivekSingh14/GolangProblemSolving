@@ -8,6 +8,7 @@ import (
 func main() {
 	s := "A man, a plan, a canal: Panama"
 	fmt.Println(isPalindrome(s))
+	fmt.Println(isPalindromeOptimized(s))
 }
 
 func isPalindrome(s string) bool {
@@ -31,4 +32,34 @@ func isPalindrome(s string) bool {
 		j--
 	}
 	return true
+}
+
+func isPalindromeOptimized(s string) bool {
+	left, right := 0, len(s)-1
+
+	lowercase := strings.ToLower(s)
+	for left <= right {
+		if !isValidChar(lowercase[left]) {
+			left++
+			continue
+		}
+
+		if !isValidChar(lowercase[right]) {
+			right--
+			continue
+		}
+
+		if lowercase[left] != lowercase[right] {
+			return false
+		} else {
+			left++
+			right--
+		}
+	}
+
+	return true
+}
+
+func isValidChar(c byte) bool {
+	return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')
 }
