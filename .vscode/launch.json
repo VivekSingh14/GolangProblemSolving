@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/searchInsert.go",
+            "program": "easyExamples/palindrome.go",
             "buildFlags": "-tags dynamic"
         }
     ]

@@ -4,7 +4,7 @@ import "fmt"
 
 // binary search without using recursion and insert
 
-func main() {
+func main12() {
 	nums := []int{1, 3, 5, 6}
 	target := 5
 	fmt.Println(searchInsert(nums, target))
