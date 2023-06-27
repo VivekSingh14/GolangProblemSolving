@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main14() {
 	s := "A man, a plan, a canal: Panama"
 	fmt.Println(isPalindrome(s))
 	fmt.Println(isPalindromeOptimized(s))
