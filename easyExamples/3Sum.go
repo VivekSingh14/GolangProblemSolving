@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main15() {
 	nums := []int{-1, 0, 1, 2, -1, -4}
 	fmt.Println(threeSum(nums))
 }
