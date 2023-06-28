@@ -42,6 +42,10 @@ func (ll *LinkedList) MiddleNode() int {
 	fast := ll.head.next
 	slow := ll.head
 
+	if fast.next == nil {
+		return slow.data
+	}
+
 	for fast != nil {
 		slow = slow.next
 		fast = fast.next.next
@@ -73,13 +77,19 @@ func (ll *LinkedList) RemoveNthFromEnd(target int) {
 		count++
 		temp = temp.next
 	}
-	fmt.Println("count: ", count)
 	temp = ll.head
+	if count <= 1 {
+		return
+	} else if count == target {
+		ll.head = ll.head.next
+	} else {
+		fmt.Println("count: ", count)
 
-	for i := 0; i < count-(target+1); i++ {
-		temp = temp.next
+		for i := 0; i < count-(target+1); i++ {
+			temp = temp.next
+		}
+		temp.next = temp.next.next
 	}
-	temp.next = temp.next.next
 }
 
 func main() {
@@ -88,11 +98,11 @@ func main() {
 
 	ll.Insert(2)
 	ll.Insert(3)
-	ll.Insert(5)
-	ll.Insert(7)
-	ll.Insert(9)
-	ll.Insert(11)
-	ll.Insert(14)
+	//ll.Insert(5)
+	//ll.Insert(7)
+	//ll.Insert(9)
+	//ll.Insert(11)
+	//ll.Insert(14)
 
 	ll.Iterate()
 	fmt.Println(ll.MiddleNode())
