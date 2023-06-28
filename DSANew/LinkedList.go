@@ -64,6 +64,24 @@ func (ll *LinkedList) Reverse() {
 	ll.head = prev
 }
 
+func (ll *LinkedList) RemoveNthFromEnd(target int) {
+	count := 0
+
+	temp := ll.head
+
+	for temp != nil {
+		count++
+		temp = temp.next
+	}
+	fmt.Println("count: ", count)
+	temp = ll.head
+
+	for i := 0; i < count-(target+1); i++ {
+		temp = temp.next
+	}
+	temp.next = temp.next.next
+}
+
 func main() {
 
 	ll := LinkedList{}
@@ -80,6 +98,10 @@ func main() {
 	fmt.Println(ll.MiddleNode())
 
 	ll.Reverse()
+
+	ll.Iterate()
+
+	ll.RemoveNthFromEnd(2)
 
 	ll.Iterate()
 
