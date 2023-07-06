@@ -8,7 +8,7 @@ import (
 
 var count2 int
 
-func main() {
+func main23() {
 	var mut sync.Mutex
 
 	go goroutine3(&mut)
