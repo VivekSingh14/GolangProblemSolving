@@ -7,7 +7,7 @@ import (
 
 var count1 int
 
-func main9() {
+func main14() {
 
 	var wg sync.WaitGroup
 
