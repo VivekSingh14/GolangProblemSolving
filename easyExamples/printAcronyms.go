@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main23() {
 	//Help generate some jargon by writing a program that converts a long name like
 	//Eg1: Three Letter Acronyms (TLA)
 	//Eg2: Portable Network Graphics (PNG)

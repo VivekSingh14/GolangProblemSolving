@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "Concurrency/fibnacci.go",
+            "program": "easyExamples/GroupAnagrams.go",
             "buildFlags": "-tags dynamic"
         }
     ]
