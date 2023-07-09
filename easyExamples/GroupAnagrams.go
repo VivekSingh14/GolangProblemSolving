@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main45() {
 	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
 	res := groupAnagrams(strs)
 
