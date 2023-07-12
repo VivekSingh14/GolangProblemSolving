@@ -121,25 +121,25 @@ func main() {
 	ll := LinkedList{}
 
 	ll.Insert(2)
-	ll.Insert(3)
-	ll.Insert(5)
+	ll.Insert(4)
+	ll.Insert(6)
 	ll.Insert(7)
 	ll.Insert(9)
-	ll.Insert(11)
-	ll.Insert(14)
+	//ll.Insert(11)
+	//ll.Insert(14)
 
 	//ll.Iterate()
 	//fmt.Println(ll.MiddleNode())
 
 	//ll.Reverse()
 
-	ll.Iterate()
+	//ll.Iterate()
 
-	ll.RemoveNthFromEnd(2)
+	//ll.RemoveNthFromEnd(2)
 
-	ll.Iterate()
+	//ll.Iterate()
 
-	ll.RemoveNthFromEndOpt(2)
+	//ll.RemoveNthFromEndOpt(2)
 
 	ll.Iterate()
 
