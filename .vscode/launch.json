@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "DSANew/LinkedList.go",
+            "program": "easyExamples/firstDuplicateInString.go",
             "buildFlags": "-tags dynamic"
         }
     ]
