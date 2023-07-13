@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main20() {
 
 	str := "1abBcdefcghi1fxyAtB"
 	fmt.Println(firstDuplicateChar(str))
