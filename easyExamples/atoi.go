@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main25() {
 	str := "4193 with words"
 	//str := "1234"
 	fmt.Println(myAtoi(str))
