@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main27() {
 	strs := []string{"flower", "flow", "flight"}
 
 	fmt.Println(longestCommonPrefix(strs))
