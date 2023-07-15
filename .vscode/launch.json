@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/longestCommonPrefix.go",
+            "program": "easyExamples/buySellStock1.go",
             "buildFlags": "-tags dynamic"
         }
     ]
