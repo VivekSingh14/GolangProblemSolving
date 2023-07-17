@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main29() {
 	n := 3
 	fmt.Println(countPrimes(n))
 }
