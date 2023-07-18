@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/ClimbStairsOrFibonacci.go",
+            "program": "DSANew/LinkedList.go",
             "buildFlags": "-tags dynamic"
         }
     ]
