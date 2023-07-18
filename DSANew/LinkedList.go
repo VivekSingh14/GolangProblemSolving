@@ -116,6 +116,33 @@ func (ll *LinkedList) RemoveNthFromEndOpt(target int) {
 
 }
 
+func (ll *LinkedList) CyclicList() bool {
+
+	fast := ll.head.next
+	slow := ll.head
+
+	for fast != nil {
+		if fast.data == slow.data {
+			return true
+		}
+		fast = fast.next.next
+		slow = slow.next
+	}
+	return false
+
+	//or other method with o(1) space complexity
+	// we will try to update the data every time and try to find out whether this same data comes back again
+	// for slow != nil {
+	// 	if slow.data == math.MaxInt {
+	// 		return true
+	// 	}
+
+	// 	slow.data = math.MaxInt
+	// 	slow = slow.next
+	// }
+	// return false
+}
+
 func main() {
 
 	ll := LinkedList{}
