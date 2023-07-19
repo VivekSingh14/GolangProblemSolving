@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//queue operations....
 type Contract interface {
 	Enqueue(int)
 	Dequeue()
