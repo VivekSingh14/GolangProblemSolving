@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main31() {
 	n := 5
 
 	fmt.Println(climbStairs(n + 1))
