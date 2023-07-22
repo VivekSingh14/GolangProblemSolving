@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/spiralTraverse.go",
+            "program": "easyExamples/mergeTwoArrays.go",
             "buildFlags": "-tags dynamic"
         }
     ]
