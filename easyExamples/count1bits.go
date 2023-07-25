@@ -5,7 +5,7 @@ import (
 	"math/bits"
 )
 
-func main() {
+func main35() {
 	var n uint32 = 00000000000000000000000000001011
 	fmt.Println(hammingWeight(n))
 	fmt.Println(hammingWeight2(n))
