@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/count1bits.go",
+            "program": "easyExamples/findDisappeared.go",
             "buildFlags": "-tags dynamic"
         }
     ]
