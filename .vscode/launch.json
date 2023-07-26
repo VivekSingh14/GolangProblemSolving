@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/findDisappeared.go",
+            "program": "easyExamples/countsegments.go",
             "buildFlags": "-tags dynamic"
         }
     ]
