@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+//asss
 func main() {
 	str := "Hello"
 	fmt.Println(countSegments(str))
