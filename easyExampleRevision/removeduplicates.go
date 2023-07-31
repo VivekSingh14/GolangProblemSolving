@@ -22,6 +22,6 @@ func removeDuplicates(nums []int) int {
 			fast++
 		}
 	}
-	fmt.Println(nums)
+
 	return slow - 1
 }
