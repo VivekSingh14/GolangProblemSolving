@@ -9,7 +9,7 @@ func main() {
 }
 
 func removeDuplicates(nums []int) int {
-
+	res := 0
 	fast := 1
 	slow := 0
 
@@ -17,11 +17,12 @@ func removeDuplicates(nums []int) int {
 		if nums[fast] == nums[slow] {
 			fast++
 		} else if nums[fast] != nums[slow] {
-			nums[fast-1] = nums[fast]
+			nums[slow+1] = nums[fast]
 			slow++
 			fast++
+			res++
 		}
 	}
-
-	return slow - 1
+	fmt.Println(nums)
+	return res + 1
 }
