@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExampleRevision/removeduplicates.go",
+            "program": "easyExampleRevision/rotateArrayByK.go",
             "buildFlags": "-tags dynamic"
         }
     ]
