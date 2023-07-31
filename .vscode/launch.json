@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExamples/countsegments.go",
+            "program": "easyExampleRevision/removeduplicates.go",
             "buildFlags": "-tags dynamic"
         }
     ]
