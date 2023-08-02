@@ -20,3 +20,19 @@ func rotate(nums []int, k int) {
 	}
 	fmt.Println(nums)
 }
+
+func rotate1(nums []int, k int) {
+	ln := len(nums)
+	if ln == 1 {
+		return
+	}
+	if ln < k {
+		k = k % ln
+	}
+	sl1 := nums[ln-k:]
+	sl2 := nums[:ln-k]
+	sl1 = append(sl1, sl2...)
+	for i := 0; i < ln; i++ {
+		nums[i] = sl1[i]
+	}
+}
