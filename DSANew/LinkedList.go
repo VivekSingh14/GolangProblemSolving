@@ -143,7 +143,7 @@ func (ll *LinkedList) CyclicList() bool {
 	// return false
 }
 
-func main() {
+func main2() {
 
 	ll := LinkedList{}
 
