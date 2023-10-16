@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "easyExampleRevision/rotateArrayByK.go",
+            "program": "AimRevision/ArrayProblems/RemoveDuplicatesFromSortedArray.go",
             "buildFlags": "-tags dynamic"
         }
     ]
