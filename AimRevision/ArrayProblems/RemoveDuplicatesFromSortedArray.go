@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main1() {
 	arr := []int{1, 1, 2}
 
 	num := removeDuplicates(arr)
