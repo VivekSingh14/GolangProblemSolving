@@ -58,18 +58,28 @@ func main() {
 
 	ll1 := LList{}
 	ll1.insert(1)
-	ll1.insert(2)
+	//ll1.insert(2)
 	ll1.insert(3)
-	ll1.insert(4)
+	//ll1.insert(4)
 	ll1.insert(5)
-	ll1.insert(6)
+	//ll1.insert(6)
 
 	ll1.display()
 
-	rev := ll1.Reverse()
+	//rev := ll1.Reverse()
 
-	ll1.head = rev
+	//ll1.head = rev
 
-	ll1.display()
+	//ll1.display()
+
+	ll2 := LList{}
+	//ll2.insert(1)
+	ll2.insert(2)
+	//ll2.insert(3)
+	ll2.insert(4)
+	//ll2.insert(5)
+	ll2.insert(6)
+
+	ll2.display()
 
 }
