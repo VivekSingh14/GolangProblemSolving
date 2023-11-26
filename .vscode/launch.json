@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/LinkedListProblems/LLImpl.go",
+            "program": "first/main.go",
             "buildFlags": "-tags dynamic"
         }
     ]
