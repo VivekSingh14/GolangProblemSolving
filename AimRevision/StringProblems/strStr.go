@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main3() {
 	haystack := "mississippi"
 	needle := "issip"
 
