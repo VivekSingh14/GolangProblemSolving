@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main1() {
 	arr := []int{10, 4, 2, 5, 6, 3, 8, 1}
 	k := 3
 	minSum(arr, k)

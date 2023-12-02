@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/SlidingWindow/KMinSum.go",
+            "program": "AimRevision/SlidingWindow/KMaxSum.go",
             "buildFlags": "-tags dynamic"
         }
     ]
