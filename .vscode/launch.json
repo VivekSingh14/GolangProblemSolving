@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/DynamicProgramming/SumNSameNum.go",
+            "program": "AimRevision/DynamicProgramming/Fibonacci.go",
             "buildFlags": "-tags dynamic"
         }
     ]
