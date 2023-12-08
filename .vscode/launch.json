@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/DynamicProgramming/StairsProblem.go",
+            "program": "AimRevision/DynamicProgramming/MaxProfitStocks.go",
             "buildFlags": "-tags dynamic"
         }
     ]
