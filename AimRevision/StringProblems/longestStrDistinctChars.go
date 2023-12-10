@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main5() {
 	str := "longestsubstr"
 
 	uniqueString(str)
