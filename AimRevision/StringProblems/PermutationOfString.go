@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main6() {
 	str := "ABC"
 	permute(str, 0, len(str)-1)
 
