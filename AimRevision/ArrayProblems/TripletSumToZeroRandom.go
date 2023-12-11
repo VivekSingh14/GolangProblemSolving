@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main10() {
 	arr := []int{0, -1, 2, -3, 1}
 
 	sort.Slice(arr, func(i, j int) bool {

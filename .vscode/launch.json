@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/TripletSumToZeroRandom.go",
+            "program": "AimRevision/ArrayProblems/MergeInterval.go",
             "buildFlags": "-tags dynamic"
         }
     ]
