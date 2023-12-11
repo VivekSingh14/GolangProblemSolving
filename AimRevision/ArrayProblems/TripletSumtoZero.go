@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main9() {
 	//sequentially
 	arr := []int{0, -1, 2, -3, 1}
 
