@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main8() {
 	str := "[()]{}{[()()]()}"
 	fmt.Println(ValidParentheses(str))
 }
