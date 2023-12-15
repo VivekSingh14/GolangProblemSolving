@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/StringProblems/GroupAnagrams.go",
+            "program": "AimRevision/ArrayProblems/MinInRotatedArray.go",
             "buildFlags": "-tags dynamic"
         }
     ]
