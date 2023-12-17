@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/MinInRotatedArray.go",
+            "program": "AimRevision/StringProblems/LongestRepeatingChar.go",
             "buildFlags": "-tags dynamic"
         }
     ]

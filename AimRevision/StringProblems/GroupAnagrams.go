@@ -6,7 +6,7 @@ type data struct {
 	str []string
 }
 
-func main() {
+func main9() {
 	arr := []string{"cat", "dog", "tac", "god", "act"}
 	groupAnagram(arr)
 }
