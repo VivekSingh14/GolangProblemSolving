@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main14() {
 	arr := []int{2, 1}
 
 	minInRotatedArray(arr)
