@@ -54,6 +54,28 @@ func (l *LList) Reverse() *node {
 	return prev
 }
 
+func (l *LList) RemoveNthNode(seq int) {
+	fast := l.head
+	slow := l.head
+
+	for i := 0; i < seq; i++ {
+		fast = fast.next
+	}
+
+	if fast == nil {
+		fast = l.head.next
+		l.head = fast
+	}
+
+	for fast.next != nil {
+		fast = fast.next
+		slow = slow.next
+	}
+
+	slow.next = slow.next.next
+
+}
+
 func main() {
 
 	ll1 := LList{}
@@ -64,7 +86,7 @@ func main() {
 	ll1.insert(5)
 	//ll1.insert(6)
 
-	ll1.display()
+	//ll1.display()
 
 	//rev := ll1.Reverse()
 
@@ -72,14 +94,18 @@ func main() {
 
 	//ll1.display()
 
-	ll2 := LList{}
+	//ll2 := LList{}
 	//ll2.insert(1)
-	ll2.insert(2)
+	ll1.insert(2)
 	//ll2.insert(3)
-	ll2.insert(4)
+	ll1.insert(4)
 	//ll2.insert(5)
-	ll2.insert(6)
+	ll1.insert(6)
 
-	ll2.display()
+	ll1.display()
+
+	ll1.RemoveNthNode(2)
+
+	ll1.display()
 
 }
