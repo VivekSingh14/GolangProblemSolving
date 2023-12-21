@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main10() {
 
 	S := "AABABBA"
 	K := 1
