@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main18() {
 	arr := []int{10, 12, 20, 30, 25, 40, 32, 31, 35, 50, 60}
 	minLengthUnsortedArray(arr)
 }
