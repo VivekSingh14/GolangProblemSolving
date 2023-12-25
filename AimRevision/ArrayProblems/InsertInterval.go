@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	intervals := [][]int{{1, 2}, {3, 5}, {6, 7}, {8, 10}, {12, 16}}
 	newInterval := []int{4, 8}
+	//display(intervals)
 	fmt.Println(insert(intervals, newInterval))
 }
 
@@ -38,3 +39,9 @@ func Max(a, b int) int {
 	}
 	return b
 }
+
+// func display(arr [][]int) {
+// 	for i, interval := range arr {
+// 		fmt.Println(interval, "  :  ", interval[0], "   :    ", i)
+// 	}
+// }
