@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/StringProblems/EncodeDecodeString.go",
+            "program": "AimRevision/ArrayProblems/KthSmallest.go",
             "buildFlags": "-tags dynamic"
         }
     ]
