@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/InsertInterval.go",
+            "program": "AimRevision/ArrayProblems/TopKFrequentNums.go",
             "buildFlags": "-tags dynamic"
         }
     ]

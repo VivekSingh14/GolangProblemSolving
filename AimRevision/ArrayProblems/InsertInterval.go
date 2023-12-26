@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main19() {
 	intervals := [][]int{{1, 2}, {3, 5}, {6, 7}, {8, 10}, {12, 16}}
 	newInterval := []int{4, 8}
 	//display(intervals)
