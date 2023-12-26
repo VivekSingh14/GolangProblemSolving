@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/TopKFrequentNums.go",
+            "program": "AimRevision/StringProblems/EncodeDecodeString.go",
             "buildFlags": "-tags dynamic"
         }
     ]
