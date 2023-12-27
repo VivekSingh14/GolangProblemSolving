@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/LongestConsecutive.go",
+            "program": "AimRevision/ArrayProblems/MinMeetingRooms2.go",
             "buildFlags": "-tags dynamic"
         }
     ]
