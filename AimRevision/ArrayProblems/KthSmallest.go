@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main21() {
 	arr := []int{7, 10, 4, 3, 20, 15}
 	K := 3
 
