@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main22() {
 	arr := []int{0, 1, 0, 3, 2, 3}
 
 	longestIncreasing(arr)

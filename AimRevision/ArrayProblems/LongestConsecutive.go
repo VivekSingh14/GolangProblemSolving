@@ -2,9 +2,10 @@ package main
 
 import "fmt"
 
-func main22() {
+func main26() {
 	//arr := []int{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}
-	arr := []int{100, 4, 200, 1, 3, 2}
+	//arr := []int{100, 4, 200, 1, 3, 2}
+	arr := []int{0, 1, 0, 3, 2, 3}
 
 	//fmt.Println(longestSequence(arr))
 	fmt.Println(longestConsecutive(arr))
