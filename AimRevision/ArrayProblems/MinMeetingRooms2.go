@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main() {
+func main23() {
 	arr := [][]int{{0, 30}, {5, 10}, {15, 20}}
 	minMeetingRooms(arr)
 }
