@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main25() {
 	coins := []int{1, 2, 5}
 	sum := 5
 	fmt.Println(MinCoins(coins, sum))

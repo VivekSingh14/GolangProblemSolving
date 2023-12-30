@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/CoinChange518.go",
+            "program": "AimRevision/ArrayProblems/LongestIncresingSubsequence.go",
             "buildFlags": "-tags dynamic"
         }
     ]
