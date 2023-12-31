@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main28() {
 	nums := []int{2, 3, 2}
 	fmt.Println(robT(nums))
 

@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/CombinationSum.go",
+            "program": "AimRevision/ArrayProblems/JumpGame.go",
             "buildFlags": "-tags dynamic"
         }
     ]
