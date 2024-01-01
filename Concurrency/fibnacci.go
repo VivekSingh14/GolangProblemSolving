@@ -8,7 +8,7 @@ import (
 var n1 = 0
 var n2 = 1
 
-func main() {
+func main2() {
 
 	num := make(chan int)
 	var wg sync.WaitGroup

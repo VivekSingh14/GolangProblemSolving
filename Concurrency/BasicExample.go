@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func main9() {
+func main10() {
 
 	fmt.Println("Before Goroutine.")
 	var wg sync.WaitGroup

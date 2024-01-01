@@ -12,11 +12,12 @@ func execute1(some string) {
 	}
 }
 
-func main6() {
+func main() {
 
 	go execute1("Vivek")
 
 	go execute1("Singh")
 
 	fmt.Println("Program ends successfully.")
+	time.Sleep(time.Millisecond * 1000)
 }

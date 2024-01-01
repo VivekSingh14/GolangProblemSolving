@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func main2() {
+func main21() {
 	var wg sync.WaitGroup
 	wg.Add(1)
 	go count("vivek", &wg)

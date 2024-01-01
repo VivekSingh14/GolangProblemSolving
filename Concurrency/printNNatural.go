@@ -7,7 +7,7 @@ import (
 
 var resNum = 0
 
-func main15() {
+func main6() {
 
 	numtemp := make(chan int)
 	//var numtemp chan int
