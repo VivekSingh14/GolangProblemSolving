@@ -14,6 +14,11 @@ func main() {
 	node := buildTree(preorder, inorde)
 	Inorder(node)
 	fmt.Println()
+	test := Invert(node)
+	fmt.Println("---------------------")
+	Inorder(test)
+	fmt.Println()
+
 }
 
 func buildTree(preorder []int, inorder []int) *TreeNode {
@@ -46,5 +51,47 @@ func Inorder(node *TreeNode) {
 }
 
 func Invert(node *TreeNode) *TreeNode {
-	return nil
+	if node == nil {
+		return node
+	}
+	var queue1 []*TreeNode
+	queue1 = append(queue1, node)
+
+	for len(queue1) != 0 {
+		node := queue1[0]
+		tempo := node.Left
+		node.Left = node.Right
+		node.Right = tempo
+		queue1 = queue1[1:]
+		if node.Left != nil {
+			queue1 = append(queue1, node.Left)
+		}
+		if node.Right != nil {
+			queue1 = append(queue1, node.Right)
+		}
+	}
+	return node
 }
+
+// func LevelOrderTraversal(root *TreeNode) []int {
+// 	var queue1 []*TreeNode
+// 	var data []int
+// 	data = append(data, 0)
+// 	temp := root
+// 	queue1 = append(queue1, temp)
+
+// 	for len(queue1) != 0 {
+
+// 		temp = queue1[0]
+// 		queue1 = queue1[1:]
+// 		//for displaying
+// 		//fmt.Print(temp.data, " ")
+// 		data = append(data, temp.data)
+// 		if temp.left != nil || temp.right != nil {
+// 			queue1 = append(queue1, temp.left)
+// 			queue1 = append(queue1, temp.right)
+// 		}
+
+// 	}
+// 	return data
+// }
