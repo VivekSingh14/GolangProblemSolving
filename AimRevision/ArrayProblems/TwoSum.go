@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main6() {
+func main31() {
 	nums := []int{2, 7, 11, 15}
 	target := 9
 	fmt.Println(twoSum(nums, target))
