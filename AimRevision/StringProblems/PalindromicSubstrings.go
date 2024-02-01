@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main12() {
+func main() {
 	s := "aaa"
 	palindromicSubstrings(s)
 }

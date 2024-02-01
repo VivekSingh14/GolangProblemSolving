@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func main() {
+func main12() {
 	str := []string{"you", "lint", "code", "love", "you"}
 	res := Encode(str)
 	//fmt.Println(res)

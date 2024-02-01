@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main32() {
 	nums := []int{1, 2, 3, 1}
 	fmt.Println(containsDuplicate(nums))
 
