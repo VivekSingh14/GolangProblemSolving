@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/StringProblems/PalindromicSubstrings.go",
+            "program": "AimRevision/ArrayProblems/leetcode1389.go",
             "buildFlags": "-tags dynamic"
         }
     ]

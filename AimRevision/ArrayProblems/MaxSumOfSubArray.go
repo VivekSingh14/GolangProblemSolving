@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main33() {
 	arr := []int{-2, -3, 4, -1, -2, 1, 5, -3}
 	maxSumSubarray(arr)
 }
