@@ -29,7 +29,7 @@ func (rectangle Rectangle) Area() float32 {
 func (triangle Triangle) Area() float32 {
 	return 0.5 * triangle.base * triangle.height
 }
-func main() {
+func main29() {
 	triangleObject := Triangle{
 		base:   20,
 		height: 10,
