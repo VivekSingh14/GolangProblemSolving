@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/ArrayProblems/leetcode1389.go",
+            "program": "AimRevision/StringProblems/leetcode1108.go",
             "buildFlags": "-tags dynamic"
         }
     ]

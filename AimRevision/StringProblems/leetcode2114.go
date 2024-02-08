@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func main15() {
 	arr := []string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}
 	fmt.Println(mostWordsFound(arr))
 }

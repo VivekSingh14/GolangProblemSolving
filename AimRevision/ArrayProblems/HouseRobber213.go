@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func main28() {
-	nums := []int{2, 3, 2}
+func main() {
+	nums := []int{1, 2, 3, 1}
 	fmt.Println(robT(nums))
 
 }

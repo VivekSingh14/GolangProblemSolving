@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main36() {
 	nums := []int{0, 1, 2, 3, 4}
 	index := []int{0, 1, 2, 2, 1}
 
