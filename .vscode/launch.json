@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/StringProblems/leetcode1108.go",
+            "program": "AimRevision/ArrayProblems/TopKFrequentNums.go",
             "buildFlags": "-tags dynamic"
         }
     ]

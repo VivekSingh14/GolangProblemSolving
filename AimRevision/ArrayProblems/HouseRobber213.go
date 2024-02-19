@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main25() {
 	nums := []int{1, 2, 3, 1}
 	fmt.Println(robT(nums))
 
@@ -21,16 +21,19 @@ func robT(nums []int) int {
 }
 
 func robber(nums []int) int {
-	r1, r2, temp := 0, 0, 0
+	rob1, rob2 := 0, 0
 	for _, n := range nums {
-		if r1+n > r2 {
-			temp = r1 + n
-		} else {
-			temp = r2
-		}
-		r1 = r2
-		r2 = temp
-
+		temp := maxsss(n+rob1, rob2)
+		rob1 = rob2
+		rob2 = temp
 	}
-	return r2
+	return rob2
+}
+
+func maxsss(a, b int) int {
+	if a > b {
+		return a
+	}
+
+	return b
 }

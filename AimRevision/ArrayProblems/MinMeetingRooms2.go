@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main23() {
+func main20() {
 	arr := [][]int{{0, 30}, {5, 10}, {15, 20}}
 	minMeetingRooms(arr)
 }
@@ -21,7 +21,7 @@ func minMeetingRooms(arr [][]int) {
 	last := 0
 	sort.Ints(st)
 	sort.Ints(end)
-	var res int
+	//var res int
 	var count int
 
 	for first < len(st) && last < len(end) {
@@ -35,9 +35,9 @@ func minMeetingRooms(arr [][]int) {
 			first++
 			last++
 		}
-		res = Maxa(res, count)
+		//res = Maxa(res, count)
 	}
-	fmt.Println(res)
+	fmt.Println(count)
 
 }
 

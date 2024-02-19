@@ -11,6 +11,7 @@ func main7() {
 	//a := []string{"5421", "245", "1452", "0345", "53", "354"}
 	//a := []string{"039", "4", "14", "32", "", "34", "7"}
 	fmt.Println(solution1(a))
+
 }
 
 func solution1(E []string) int {

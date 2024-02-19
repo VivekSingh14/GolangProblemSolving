@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main20() {
+func main() {
 	//arr := []int{3, 1, 4, 4, 5, 2, 6, 1}
 	arr := []int{7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9}
 	//k := 2
