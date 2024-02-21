@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision/StringProblems/GCDOfStrings.go",
+            "program": "AimRevision2/ArrayProblems/TwoSum.go",
             "buildFlags": "-tags dynamic"
         }
     ]
