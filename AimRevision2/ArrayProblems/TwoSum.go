@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main1() {
 	nums := []int{3, 2, 4}
 	target := 6
 	fmt.Println(targetSum(nums, target))
