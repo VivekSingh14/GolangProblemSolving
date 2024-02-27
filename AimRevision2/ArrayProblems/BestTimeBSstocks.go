@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main6() {
 	prices := []int{7, 6, 4, 3, 1}
 
 	fmt.Println(maxProfit(prices))
