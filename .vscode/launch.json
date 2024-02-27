@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision2/ArrayProblems/BestTimeBSstocks.go",
+            "program": "AimRevision2/ArrayProblems/MaxSumSubArr.go",
             "buildFlags": "-tags dynamic"
         }
     ]
