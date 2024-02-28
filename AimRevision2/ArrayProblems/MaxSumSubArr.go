@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main7() {
 	arr := []int{1, 4, 2, 10, 23, 3, 1, 0, 20}
 	k := 4
 	fmt.Println(maxSumSubArray(arr, k))
