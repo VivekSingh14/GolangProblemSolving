@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision2/ArrayProblems/MaxSumSeqArr.go",
+            "program": "AimRevision2/StringProblems/lognestsStringDistChars.go",
             "buildFlags": "-tags dynamic"
         }
     ]

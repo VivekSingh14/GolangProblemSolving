@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main8() {
 	arr := []int{-2, -3, 4, -1, -2, 1, 5, -3}
 
 	fmt.Println(maxSum(arr))
