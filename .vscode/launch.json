@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision2/HeapLearning/InsertInMaxHeap.go",
+            "program": "AimRevision2/ArrayProblems/RunningSumOf1dArray.go",
             "buildFlags": "-tags dynamic"
         }
     ]
