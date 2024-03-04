@@ -6,7 +6,7 @@ import "fmt"
 Prefix Sum algorithm
 -- */
 
-func main() {
+func main11() {
 	nums := []int{1, 2, 3, 4}
 	fmt.Println(runningSum(nums))
 }

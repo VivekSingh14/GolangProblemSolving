@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision2/ArrayProblems/RunningSumOf1dArray.go",
+            "program": "AimRevision2/ArrayProblems/MiddleIndexOfArray.go",
             "buildFlags": "-tags dynamic"
         }
     ]
