@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 	heap := []int{0, 5, 8, 10, 11, 12, 14, 16}
 	element := 6
 	//res := InsertionIntoMaxHeap(heap, element)
