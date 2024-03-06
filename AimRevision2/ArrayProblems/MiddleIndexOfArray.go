@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main14() {
 	nums := []int{2, 3, -1, 8, 4}
 	// o/p = 3
 	// because leftmax = 2 + 3 + (-1)
