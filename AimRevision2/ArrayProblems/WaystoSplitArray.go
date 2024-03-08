@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main15() {
 	nums := []int{2, 3, 1, 0}
 	//10, 14, 6, 13
 	//13, 3, -1 , 7
