@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "AimRevision2/TrieProblems/BasicOperations.go",
+            "program": "AimRevision2/TreeProblems/BST.go",
             "buildFlags": "-tags dynamic"
         }
     ]
